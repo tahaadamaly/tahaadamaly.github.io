@@ -1,0 +1,18 @@
+/*Here is some example CSS by Charlie Meyrick. */
+
+body{
+
+    background-color: #105814 ;
+    max-width: 450px;
+    margin: auto;
+}
+
+.chart{
+    background-color: #105814;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 5px
+}
