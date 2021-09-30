@@ -2,17 +2,21 @@
 
 body{
 
-    background-color: #105814 ;
-    max-width: 450px;
+    background-color: #0a6b6e ;
+    max-width: auto;
     margin: auto;
 }
 
 .chart{
-    background-color: #105814;
-    margin-bottom: 15px;
+    background-color: #0a6b6e;
+    margin-top: 50px;
+    margin-left: 20px;
     border-style: solid;
     border-color: black;
     border-width: 2px;
     border-radius: 10px;
-    padding: 5px
+    float: left;
+    width: 30%;
+    text-align: center;
+    padding: 10px
 }
