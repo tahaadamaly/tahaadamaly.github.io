@@ -55,7 +55,7 @@ header {
 .chart:hover {
     border-color: rgb(224, 70, 8);
     padding: 35px;
-    border-radius: 0;
+    border-radius: 5px;
 }
 
 footer {
