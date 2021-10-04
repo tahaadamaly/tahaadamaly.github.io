@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "title": {
+      "text": "Covid Vaccinations",
+      "subtitle":"As a percentage of the population",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+     "data": {
+      "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/CovidVaccinations.csv",
+      "format": {"type": "csv"}
+    },
+  
+     "transform":[
+        
+        {"filter": {
+          "field": "areaName", 
+          "oneOf": ["Birmingham", "Cotswold", "Brighton and Hove"]}
+          }
+  
+  
+      ],
+    
+    
+    "height": 300,
+    "width": 310,
+     
+    "mark": {"type": "line", "point": false},
+   
+    "encoding": {
+  
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}
+      },
+  
+      "y": {
+        "field": "cumVaccinationCompleteCoverageByVaccinationDatePercentage",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid": false}
+      },
+  
+      "color": {
+        "field": "areaName",
+        "type": "nominal",
+        "scale": {"scheme": "set1"},
+        "title": "Region",
+        "legend": {
+          "orient": "top-left", 
+          "fillColor": "#FcFdFd"}
+      }
+  }
+  }
