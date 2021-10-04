@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik");
+
 
 body{
 
@@ -6,33 +8,40 @@ body{
     margin: auto;
 }
 
-.h1{
+h1{
     text-align: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Rubik, sans-serif;
     color: #138ee8;
+    font-size: 50px;
 }
 
-.h2 {
+h2 {
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #138ee8;
-    font-weight: bold;
+    font-family: Rubik, sans-serif;
+    color: white;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: -35px;
+    margin-bottom: 50px;
+
+
 }
 
 .chart{
-    background-color: #081521;
-    margin-top: 50px;
-    margin-left: 20px;
+    background-color: white;
+    margin: auto;
+    display: flex;
     margin-bottom: 20px;
     border-style: solid;
-    border-color: black;
+    border-color: white;
     border-width: 2px;
     border-radius: 10px;
-    float: left;
-    width: 30%;
+    width: 33%;
     text-align: center;
     padding: 10px
 }
+
+
 
 .header1 {
     font-size: 50px;
