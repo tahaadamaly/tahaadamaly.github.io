@@ -8,11 +8,20 @@ body{
     margin: auto;
 }
 
-h1{
+b1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 30px 30px;
+}
+
+h1 {
     text-align: center;
     font-family: Rubik, sans-serif;
-    color: #138ee8;
+    color: rgb(17, 143, 242);
     font-size: 50px;
+    margin-top: 10px;
 }
 
 h2 {
@@ -22,26 +31,33 @@ h2 {
     font-weight: lighter;
     font-size: 20px;
     margin-top: -35px;
-    margin-bottom: 50px;
+}
 
-
+header {
+    border: 3px solid rgb(17, 143, 242);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 30px;
 }
 
 .chart{
     background-color: white;
-    margin: auto;
-    display: flex;
-    margin-bottom: 20px;
     border-style: solid;
     border-color: white;
-    border-width: 2px;
-    border-radius: 10px;
-    width: 33%;
+    border-width: 4px;
+    border-radius: 25px;
     text-align: center;
-    padding: 15px
+    padding: 20px;
+    transition: padding 700ms;
 }
 
-.header1 {
-    font-size: 50px;
-    text-align: center;
+.chart:hover {
+    border-color: rgb(224, 70, 8);
+    padding: 35px;
+}
+
+footer {
+
+    height: 100px;
 }
