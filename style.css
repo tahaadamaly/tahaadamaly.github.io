@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Rubik");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Cormorant|Spectral|Montserrat|Sora|Jetbrains+Mono|Andada+Pro");
 
 
 body{
@@ -18,7 +18,6 @@ b1 {
 
 h1 {
     text-align: center;
-    font-family: Rubik, sans-serif;
     color: rgb(17, 143, 242);
     font-size: 50px;
     margin-top: 10px;
@@ -26,15 +25,15 @@ h1 {
 
 h2 {
     text-align: center;
-    font-family: Rubik, sans-serif;
     color: white;
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 30px;
     margin-top: -35px;
 }
 
 header {
     border: 3px solid rgb(17, 143, 242);
+    font-family: 'Poppins', sans-serif;
     border-top: none;
     border-left: none;
     border-right: none;
