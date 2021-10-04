@@ -8,8 +8,8 @@
   "subtitleFontStyle":"italic",
   "subtitleFontSize":10,
   "anchor": "start",
-  "color": "#179fdb",
-  "subtitleColor":"#179fdb"},
+  "color": "black",
+  "subtitleColor":"black"},
 
 "config": {
   "background":"#FFFFFF",
@@ -31,7 +31,7 @@
   "type": "line",
   "point": false,
   "interpolate": "linear",
-  "color":"#f4c245"
+  "color":"#d89b00"
 },
 
 
@@ -50,7 +50,7 @@
          "min": 2016, 
          "max": 2021, 
          "step": 1,
-         "name": "Start year:"}
+         "name": "Start year: "}
     },
 
     {"name":"maxYear", "value":2021,
@@ -59,11 +59,9 @@
          "min": 2016, 
          "max": 2021, 
          "step": 1,
-         "name": "End year:"}
+         "name": "End year: "}
     }
   ],
-
-
 
   "encoding": {
     
@@ -76,8 +74,8 @@
       "grid": false,
       "labelSeparation": 10,
       "domainColor":"dimgrey",
-      "labelColor":"#00a767",
-      "tickColor":"pink",
+      "labelColor":"black",
+      "tickColor":"black",
       "gridColor":"dimgrey"
     }},
 
@@ -88,8 +86,8 @@
     "axis": {
       "grid": false,
       "domainColor":"dimgrey",
-      "labelColor":"#00a767",
-      "tickColor":"pink",
+      "labelColor":"black",
+      "tickColor":"black",
       "gridColor":"dimgrey",
       "format":"$,.5"}
       }
