@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Cormorant|Spectral|Montserrat|Sora|Jetbrains+Mono|Andada+Pro");
+@import url("https://fonts.googleapis.com/css2?family=Poppinswght@300&family=Poppins:wght@600");
 
 
 body{
@@ -17,27 +17,37 @@ b1 {
 }
 
 h1 {
-    text-align: center;
-    color: rgb(17, 143, 242);
-    font-size: 50px;
+    color: rgb(19, 143, 242);
+    font-size: 45px;
     margin-top: 10px;
+    text-align: left;
+    font-weight: bold;
 }
 
 h2 {
-    text-align: center;
     color: white;
     font-weight: lighter;
-    font-size: 30px;
+    font-size: 25px;
     margin-top: -35px;
+    text-align: left;
 }
 
+
+.blue {
+    color: rgb(17, 143, 242);
+}
+
+.white {
+    color: white
+}
 header {
-    border: 3px solid rgb(17, 143, 242);
+    border: 3px solid rgb(19, 143, 242);
     font-family: 'Poppins', sans-serif;
     border-top: none;
     border-left: none;
     border-right: none;
     margin-bottom: 30px;
+
 }
 
 .chart{
