@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- Taha Adamaly, Data Science 2021 -->
+<!-- Taha Adamaly, ECON30006: Data Science 2021 -->
 
 
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
@@ -14,13 +14,11 @@
 
 <link rel="stylesheet" href="style.css">
 
-<title>tahaadamaly</title>
+<title>ECON30006 Taha Adamaly</title>
 
 </head>
 
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
-
-
 
 
 <!-- ///////////////////  START BODY //////////////////////////////////// -->
@@ -31,19 +29,20 @@
 <header>
 <h1>Data Science</h1>
 <h2>ECON30006: Taha Adamaly</h2>
-
-
 </header>
 
+
+<!--Navigation buttons-->
 <div class="multi-button">
+  <button style="color: rgb(17, 143, 242);" onclick="location.href='index.html'">home</button>
+  <button onclick="location.href='project_page.html'">project</button>
   <button onclick="location.href='https://github.com/tahaadamaly/tahaadamaly.github.io'">github</button>
-  <button>project</button>
   <button onclick="location.href='https://rapidcharts.io/datascience'">course</button>
 </div>
 
 
-<!--Charts are located in b1-->
-<b1>
+<!--Charts are located in container-->
+<container>
 
 <!--Chart 1 showing Covid Cases by Region -->
   <div class="chart" id="chart1">
@@ -53,7 +52,7 @@
       </script>
   </div>
 
-<!--Chart 2 -->
+<!--Chart 2 showing UK productivity levels over time -->
 <div class="chart" id="chart2">
   <script>
     var myChart2 = "charts/chart2_ukProductivity.json";
@@ -61,9 +60,7 @@
   </script>
 </div>
 
-
-
-<!--Bitcoin Chart -->
+<!--Bitcoin Chart Long Run -->
 <div class="chart" id="chartbtc">
     <script>
       var myChartBTC = "charts/bitcoin-graph.json";
@@ -87,14 +84,15 @@
     vegaEmbed('#chartvaccines2', myChartBTC);
   </script>
 </div>
-</b1>
 
+</container>
 
-<!--Footer-->
+<!--Footer, to add a buffer at the bottom of the page-->
 <footer>
- 
 </footer>
+
 </body>
+
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
 
 </html>

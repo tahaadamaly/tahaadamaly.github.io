@@ -4,12 +4,12 @@
 body{
 
     background-color: #081521 ;
-    max-width: 93%;
+    max-width: 94%;
     margin: auto;
 }
 
 /* Flexbox containing home page graphs */
-b1 {
+container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -17,6 +17,8 @@ b1 {
     gap: 30px 30px;
     margin-top: 30px;
 }
+
+
 
 /* Data Science Title */
 h1 {
@@ -72,12 +74,11 @@ header {
 }
 
 footer {
-
     height: 100px;
 }
 
 
-/* Buttons on nav bar */
+/* Buttons on navigation bar */
 
 :root {
     --border-size: 0.125rem;
