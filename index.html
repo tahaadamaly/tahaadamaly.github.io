@@ -1,4 +1,7 @@
-<!-- Taha Adamaly, ECON30006: Data Science 2021 -->
+<!--------------------------------------------------------------------------
+ECON30006: Data Science 2021 
+Taha Adamaly 
+--------------------------------------------------------------------------->
 
 <!DOCTYPE html>
 
@@ -55,7 +58,7 @@
 <container>
 
 <!--Chart 1 showing Covid Cases by Region -->
-  <div class="chart" id="chart1">
+  <div class="chart" id="chart1" tabindex="1">
       <script>
         var myChart1 = "charts/chart1_covidUKRegions.json";
         vegaEmbed('#chart1', myChart1);
@@ -63,7 +66,7 @@
   </div>
 
 <!--Chart 2 showing UK productivity levels over time -->
-<div class="chart" id="chart2">
+<div class="chart" id="chart2" tabindex="2">
   <script>
     var myChart2 = "charts/chart2_ukProductivity.json";
     vegaEmbed('#chart2', myChart2);
@@ -71,7 +74,7 @@
 </div>
 
 <!--Bitcoin Chart Long Run -->
-<div class="chart" id="chartbtc">
+<div class="chart" id="chartbtc" tabindex="3">
   <script>
     var myChartBTC = "charts/bitcoin-graph.json";
     vegaEmbed('#chartbtc', myChartBTC);
@@ -91,7 +94,7 @@
 <container>
 
 <!--Vaccinations Chart -->
-<div class="chart" id="chartvaccines">
+<div class="chart" id="chartvaccines" tabindex="4">
   <script>
     var myChartBTC = "charts/chart_CovidVaccines1.json";
     vegaEmbed('#chartvaccines', myChartBTC);
@@ -99,7 +102,7 @@
 </div>
 
 <!--Vaccinations Chart 2-->
-<div class="chart" id="chartvaccines2">
+<div class="chart" id="chartvaccines2" tabindex="5">
   <script>
     var myChartBTC = "charts/chart_CovidVaccines2.json";
     vegaEmbed('#chartvaccines2', myChartBTC);
