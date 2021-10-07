@@ -10,52 +10,68 @@ ECON30006 Data Science
 
 
 body{
-    background-color: #081521;
-    max-width: 90%;
-    margin: auto;
+  background-color: #081521;
+  max-width: 90%;
+  margin: auto;
 }
 
 /* Flexbox containing home page graphs */
-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-    gap: 30px 30px;
-    margin-top: 30px;
-    border-style: solid;
-    border-color: white;
-    padding: 30px;
-    border-radius: 25px;
+.bcontainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 30px 30px;
+  margin-top: 30px;
+  border-style: solid;
+  border-color: white;
+  padding: 30px;
+  border-radius: 25px;
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
 }
 
+/* Flexbox containing header */
+.hcontainer {
+  display: flex;
+  justify-content: space-between;
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+  border: 3px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 30px;
+}
 
 
 /* Data Science Title */
 h1 {
-    color: rgb(19, 143, 242);
-    font-size: 45px;
-    margin-top: 10px;
-    text-align: left;
-    font-weight: bold;
+  color: rgb(19, 143, 242);
+  font-size: 45px;
+  margin-top: 10px;
+  text-align: left;
+  font-weight: bold;
+  justify-content: left;
 }
 
 /* Name and unit code */
 h2 {
-    color: white;
-    font-weight: lighter;
-    font-size: 25px;
-    margin-top: -35px;
-    text-align: left;
+  color: white;
+  font-weight: lighter;
+  font-size: 25px;
+  margin-top: -35px;
+  text-align: left;
 }
 
 header {
-    border: 3px solid white;
     font-family: 'Poppins', sans-serif;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    margin-bottom: 30px;
 }
 
 .bodyText {
@@ -77,20 +93,20 @@ header {
 }
 
 .chart{
-    background-color: white;
-    border-style: solid;
-    border-color: white;
-    border-width: 4px;
-    border-radius: 25px;
-    text-align: center;
-    padding: 20px;
-    transition: padding 500ms, border-radius 500ms;
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 4px;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+  transition: padding 500ms, border-radius 500ms;
 }
 
 .chart:hover {
-    border-color: rgb(224, 70, 8);
-    padding: 35px;
-    border-radius: 5px;
+  border-color: rgb(224, 70, 8);
+  padding: 35px;
+  border-radius: 5px;
 }
 
 .chart:focus {
@@ -174,3 +190,52 @@ footer {
   .multi-button button:active {
     transform: translateY(var(--border-size));
   }
+
+
+/* Page Fade In */
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
