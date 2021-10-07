@@ -13,6 +13,11 @@ body{
   background-color: #081521;
   max-width: 90%;
   margin: auto;
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
 }
 
 /* Flexbox containing home page graphs */
@@ -27,22 +32,13 @@ body{
   border-color: white;
   padding: 30px;
   border-radius: 25px;
-  animation: fadeIn ease 2s;
-  -webkit-animation: fadeIn ease 2s;
-  -moz-animation: fadeIn ease 2s;
-  -o-animation: fadeIn ease 2s;
-  -ms-animation: fadeIn ease 2s;
+
 }
 
 /* Flexbox containing header */
 .hcontainer {
   display: flex;
   justify-content: space-between;
-  animation: fadeIn ease 2s;
-  -webkit-animation: fadeIn ease 2s;
-  -moz-animation: fadeIn ease 2s;
-  -o-animation: fadeIn ease 2s;
-  -ms-animation: fadeIn ease 2s;
   border: 3px solid white;
   border-top: none;
   border-left: none;
