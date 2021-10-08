@@ -5,27 +5,25 @@ Taha Adamaly
 
 <!DOCTYPE html>
 
-
-
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+<title>Taha Adamaly</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+
 <!--The next three lines allow the Vega embed-->
 <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
 <link rel="stylesheet" href="style.css">
-
-<title>ECON30006 Taha Adamaly</title>
 <link rel="icon" type="image/png" href="favicon.png">
-
-
 
 </head>
 
-<!-- ///////////////////  HEAD //////////////////////////////////// -->
+<!-- ///////////////////  END HEAD //////////////////////////////////// -->
 
 
 
@@ -47,10 +45,12 @@ Taha Adamaly
 <!-- /////////////////// NAVIGATION BUTTONS //////////////////////////////////// -->
 
 <div class="multi-button">
+
   <button style="color: rgb(17, 143, 242);" onclick="location.href='index.html'">home</button>
   <button onclick="location.href='project_page.html'">project</button>
   <button onclick="location.href='https://github.com/tahaadamaly/tahaadamaly.github.io'">github</button>
   <button onclick="location.href='https://rapidcharts.io/datascience'">course</button>
+
 </div>
 
 <!-- /////////////////// END NAVIGATION BUTTONS //////////////////////////////////// -->
@@ -100,18 +100,18 @@ Taha Adamaly
 <container class="bcontainer">
 
 <!--Vaccinations Chart -->
-<div class="chart" id="chartvaccines" tabindex="4">
+<div class="chart" id="chartvaccinesAPI" tabindex="4">
   <script>
-    var myChartBTC = "charts/chart_CovidVaccines1.json";
-    vegaEmbed('#chartvaccines', myChartBTC);
+    var vaccineChartAPI = "charts/chart_CovidVaccinesAPI.json";
+    vegaEmbed('#chartvaccinesAPI', vaccineChartAPI);
   </script>
 </div>
 
 <!--Vaccinations Chart 2-->
-<div class="chart" id="chartvaccines2" tabindex="5">
+<div class="chart" id="chartvaccinesCSV" tabindex="5">
   <script>
-    var myChartBTC = "charts/chart_CovidVaccines2.json";
-    vegaEmbed('#chartvaccines2', myChartBTC);
+    var vaccineChartCSV = "charts/chart_CovidVaccinesCSV.json";
+    vegaEmbed('#chartvaccinesCSV', vaccineChartCSV);
   </script>
 </div>
 
@@ -122,14 +122,17 @@ Taha Adamaly
 
 
 <!-- ///////////////////  FOOTER //////////////////////////////////// -->
+
 <footer>
 </footer>
+
 <!-- ///////////////////  END FOOTER //////////////////////////////////// -->
 
 
-</body>
-<!-- ///////////////////  END BODY //////////////////////////////////// -->
 
+</body>
+
+<!-- ///////////////////  END BODY //////////////////////////////////// -->
 
 
 
