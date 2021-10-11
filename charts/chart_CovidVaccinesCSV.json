@@ -11,7 +11,7 @@
     },
     
      "data": {
-      "url": "data/CovidVaccinations.csv",
+      "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/CovidVaccinations.csv",
       "format": {"type": "csv"}
     },
   
