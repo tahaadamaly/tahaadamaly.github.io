@@ -11,7 +11,7 @@ Taha Adamaly
 
 <title>Taha Adamaly</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!--The next three lines allow the Vega embed-->
 <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
@@ -60,17 +60,23 @@ Taha Adamaly
 
 <!-- /////////////////// CONTAINER WITH WEEK 1 WORK //////////////////////////////////// -->
 
-<p class="bodyText"><span style="color: rgb(19, 143, 242); font-weight: 700;">Week 1: </span>Getting started</p>
+<p class="bodyText"><span style="color: rgb(19, 143, 242); font-weight: 700;">Week 1: </span>UK Covid Cases by Region</p>
 
 <container class="bcontainer">
 
-<!--Chart 1 showing Covid Cases by Region -->
-  <div class="chart" id="chart1" tabindex="1">
-      <script>
-        var myChart1 = "charts/chart1_covidUKRegions.json";
-        vegaEmbed('#chart1', myChart1);
-      </script>
-  </div>
+  <!--Chart 1 showing Covid Cases by Region -->
+    <div class="chart" id="chart1" tabindex="1">
+        <script>
+          var myChart1 = "charts/chart1_covidUKRegions.json";
+          vegaEmbed('#chart1', myChart1);
+        </script>
+    </div>
+  </container>
+
+
+<p class="bodyText"><span style="color: rgb(19, 143, 242); font-weight: 700;">Week 1: </span>Getting started</p>
+
+<container class="bcontainer">
 
 <!--Chart 2 showing UK productivity levels over time -->
 <div class="chart" id="chart2" tabindex="2">
