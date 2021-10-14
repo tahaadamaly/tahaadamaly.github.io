@@ -109,6 +109,19 @@ h2 {
   min-width: 400px;
 }
 
+#chart2, #chartbtc, #chartvaccinesAPI, #chartvaccinesCSV{
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+  transition: padding 500ms, border-radius 500ms;
+  width: 45%;
+  min-width: 400px;
+}
+
 
 .chart:hover {
   border-color: rgb(224, 70, 8);
@@ -116,7 +129,7 @@ h2 {
   border-radius: 5px;
 }
 
-#chart1:hover {
+#chart1:hover, #chart2:hover, #chartbtc:hover, #chartvaccinesAPI:hover, #chartvaccinesCSV:hover {
   border-color: rgb(224, 70, 8);
   border-radius: 5px;
 }
