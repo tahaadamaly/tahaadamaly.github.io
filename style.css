@@ -85,7 +85,7 @@ h2 {
 
 
 
-.chart{
+.chart {
   background-color: white;
   border-style: solid;
   border-color: white;
@@ -93,7 +93,18 @@ h2 {
   border-radius: 25px;
   text-align: center;
   padding: 20px;
-  transition: padding 500ms, border-radius 500ms;
+  transition: padding 500ms, border-radius 500ms, flex-grow 1000ms;
+  width: 45%;
+  min-width: 400px;
+}
+
+
+
+
+.chart:hover, #chart1:hover {
+  border-color: rgb(224, 70, 8);
+  border-radius: 5px;
+  flex-grow: 2;
 }
 
 #chart1{
@@ -109,30 +120,6 @@ h2 {
   min-width: 400px;
 }
 
-#chart2, #chartbtc, #chartvaccinesAPI, #chartvaccinesCSV{
-  background-color: white;
-  border-style: solid;
-  border-color: white;
-  border-width: 2px;
-  border-radius: 25px;
-  text-align: center;
-  padding: 20px;
-  transition: padding 500ms, border-radius 500ms;
-  width: 45%;
-  min-width: 400px;
-}
-
-
-.chart:hover {
-  border-color: rgb(224, 70, 8);
-  padding: 35px;
-  border-radius: 5px;
-}
-
-#chart1:hover, #chart2:hover, #chartbtc:hover, #chartvaccinesAPI:hover, #chartvaccinesCSV:hover {
-  border-color: rgb(224, 70, 8);
-  border-radius: 5px;
-}
 
 /*
 .chart:focus {
@@ -154,7 +141,7 @@ footer {
 
 /* --------------------------------------EXTRAS--------------------------------------------*/
 
-/* Buttons on navigation bar */
+/* Buttons on navigation bar, taken from https://freefrontend.com/css-buttons/, https://codepen.io/hexagoncircle/pen/wvBmvOG */
 
 :root {
     --border-size: 0.125rem;
@@ -271,5 +258,3 @@ footer {
     opacity:1;
   }
 }
-
-
