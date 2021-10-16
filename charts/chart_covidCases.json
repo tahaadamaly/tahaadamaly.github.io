@@ -7,7 +7,7 @@
     "color": "black"
   },
   "height": 300,
-  "width": 310,
+  "width": "container",
   "data": {
     "values": [
       {"date": "A. Apr 2020", "cases": 30088}, {"date": "B. Aug 2020", "cases": 303942},
@@ -20,8 +20,8 @@
     "color": "darkred"
   },
   "encoding": {
-    "x": {"field": "date", "type": "nominal", "axis": {"labelAngle": 0}},
-    "y": {"field": "cases", "type": "quantitative"}
+    "x": {"field": "date", "type": "nominal", "axis": {"labelAngle": 0}, "title": "Date"},
+    "y": {"field": "cases", "type": "quantitative", "title": "Cases"}
   }
 }
 

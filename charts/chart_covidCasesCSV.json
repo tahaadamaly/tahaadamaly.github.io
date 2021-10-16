@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "UK Covid Cases",
+    "anchor": "start",
+    "color": "black"
+  },
+  "height": 300,
+  "width": "container",
+  "data": {
+    "url": "data/cumCasesByPublishDate.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": {
+    "type": "line",
+    "interpolate": "monotone",
+    "color": "darkred"
+  },
+  "encoding": {
+    "x": {"field": "date", "type": "temporal", "axis": {"labelAngle": 0, "grid": false}, "title": "Date"},
+    "y": {"field": "cumCasesByPublishDate", "type": "quantitative", "axis": {"grid": false}, "title": "Cases"}
+  }
+}
+

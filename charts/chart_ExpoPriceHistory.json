@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Expolanka Holding Price History",
+    "anchor": "start",
+    "color": "black"
+  },
+  "height": 300,
+  "width": "container",
+  "data": {
+    "url": "data/PriceData_EXPO.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": {
+    "type": "line",
+    "interpolate": "monotone",
+    "color": "darkred"
+  },
+  "encoding": {
+    "x": {"field": "Date", "type": "temporal", "axis": {"labelAngle": 0, "grid": false}, "title": "Date"},
+    "y": {"field": "Close", "type": "quantitative", "axis": {"grid": false}, "title": "Price"}
+  }
+}
+

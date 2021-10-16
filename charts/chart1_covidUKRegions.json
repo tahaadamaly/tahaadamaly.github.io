@@ -60,11 +60,12 @@
   ],
 
   "encoding": {
-    "x": {"field": "date", "type": "temporal", "title": null},
+    "x": {"field": "date", "type": "temporal", "title": null, "axis": {"grid": false}},
     "y": {
       "field": "newCasesByPublishDate",
       "type": "quantitative",
-      "title": null
+      "title": null, 
+      "axis": {"grid": false}
     },
     
       

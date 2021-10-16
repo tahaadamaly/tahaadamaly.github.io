@@ -130,15 +130,23 @@ Taha Adamaly
 
 <!-- ///////////////////  CONTAINER WITH WEEK 3 WORK //////////////////////////////////// -->
 
-<p class="bodyText"><span style="color: rgb(19, 143, 242); font-weight: 700;">Week 3: </span>Defining Datapoints Within JSON Script</p>
+<p class="bodyText"><span style="color: rgb(19, 143, 242); font-weight: 700;">Week 3: </span>Defining Datapoints Within JSON Script and Modifying CSV file</p>
 
 <container class="bcontainer">
 
-<!-- Covid Cases Chart -->
-<div class="chart" id="chartCovidCases" tabindex="4">
+<!-- Covid Cases Chart: In-line JSON data -->
+<div class="chart" id="chartCovidCasesJSON" tabindex="4">
   <script>
     var covidCaseChart = "charts/chart_CovidCases.json";
-    vegaEmbed('#chartCovidCases', covidCaseChart);
+    vegaEmbed('#chartCovidCasesJSON', covidCaseChart);
+  </script>
+</div>
+
+<!-- Covid Cases Chart: Data from CSV, updated to include one additional line -->
+<div class="chart" id="chartCovidCasesCSV" tabindex="4">
+  <script>
+    var covidCaseChartCSV = "charts/chart_CovidCasesCSV.json";
+    vegaEmbed('#chartCovidCasesCSV', covidCaseChartCSV);
   </script>
 </div>
 
