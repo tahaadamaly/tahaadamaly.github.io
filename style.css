@@ -20,6 +20,20 @@ body {
   -o-animation: fadeIn ease 2s;
   -ms-animation: fadeIn ease 2s;
 }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #081521;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFFFFF;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(155, 155, 155);
+}
+
 
 .bodyText {
   color: white;
@@ -93,9 +107,10 @@ h2 {
   border-radius: 25px;
   text-align: center;
   padding: 20px;
-  transition: padding 500ms, border-radius 500ms, flex-grow 1000ms;
+  transition: border-radius 500ms, flex-grow 1000ms;
   width: 45%;
   min-width: 400px;
+  
 }
 
 
