@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A simple bar chart with embedded data.",
   "title": {
     "text": "UK Covid Cases",
     "anchor": "start",
@@ -10,8 +9,8 @@
   "width": "container",
   "data": {
     "values": [
-      {"date": "01/04/2020", "cases": 30088}, {"date": "01/08/2020", "cases": 303942},
-      {"date": "01/12/2020", "cases": 1643086}, {"date": "01/04/2021", "cases": 4350266}, {"date": "01/08/2021", "cases": 5880667}
+      {"date": "2020-04-01", "cases": 30088}, {"date": "2020-08-01", "cases": 303942},
+      {"date": "2020-12-01", "cases": 1643086}, {"date": "2021-04-01", "cases": 4350266}, {"date": "2021-08-01", "cases": 5880667}
     ]
   },
   "mark": {
@@ -20,8 +19,8 @@
     "color": "darkred"
   },
   "encoding": {
-    "x": {"field": "date", "type": "temporal", "axis": {"labelAngle": 0}, "title": "Date"},
-    "y": {"field": "cases", "type": "quantitative", "title": "Cases"}
+    "x": {"field": "date", "type": "temporal", "axis": {"labelAngle": 0, "grid": false}, "title": "Date"},
+    "y": {"field": "cases", "type": "quantitative","axis": {"grid": false}, "title": "Cases"}
   }
 }
 
