@@ -10,8 +10,8 @@
   "width": "container",
   "data": {
     "values": [
-      {"date": "A. Apr 2020", "cases": 30088}, {"date": "B. Aug 2020", "cases": 303942},
-      {"date": "C. Dec 2020", "cases": 1643086}, {"date": "D. April 2021", "cases": 4350266}, {"date": "E. August 2021", "cases": 5880667}
+      {"date": "01/04/2020", "cases": 30088}, {"date": "01/08/2020", "cases": 303942},
+      {"date": "01/12/2020", "cases": 1643086}, {"date": "01/04/2021", "cases": 4350266}, {"date": "01/08/2021", "cases": 5880667}
     ]
   },
   "mark": {
@@ -20,7 +20,7 @@
     "color": "darkred"
   },
   "encoding": {
-    "x": {"field": "date", "type": "nominal", "axis": {"labelAngle": 0}, "title": "Date"},
+    "x": {"field": "date", "type": "temporal", "axis": {"labelAngle": 0}, "title": "Date"},
     "y": {"field": "cases", "type": "quantitative", "title": "Cases"}
   }
 }
