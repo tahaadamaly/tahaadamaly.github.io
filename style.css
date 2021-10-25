@@ -20,6 +20,8 @@ body {
   -o-animation: fadeIn ease 2s;
   -ms-animation: fadeIn ease 2s;
 }
+
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -44,6 +46,12 @@ body {
   font-weight: lighter;
   text-align: center;
 }
+
+.pagecontainer {
+  display: grid;
+
+}
+
 
 /* -----------------------------------CONTENT IN HEADER---------------------------------------------*/
 
@@ -109,7 +117,7 @@ h2 {
   padding: 20px;
   transition: border-radius 500ms, flex-grow 1000ms;
   width: 45%;
-  min-width: 400px;
+  min-width: 300px;
   
 }
 
@@ -132,7 +140,7 @@ h2 {
   padding: 20px;
   transition: padding 500ms, border-radius 500ms;
   width: 100%;
-  min-width: 400px;
+  min-width: 300px;
 }
 
 
@@ -271,5 +279,26 @@ footer {
   }
   100% {
     opacity:1;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body {
+    max-width: 98%
+  }
+  .multi-button button {
+    font-size: 1rem;
+  }
+  .chart {
+    min-width: 350px;
+    padding: 10px
+  }
+  .chart:hover {
+    border-color: rgb(224, 70, 8);
+  }
+  .bcontainer {
+    border-style: none;
+    padding: 1px;
+    gap: 10px 10px
   }
 }
