@@ -1,5 +1,6 @@
 import formula1 as f1
 from tabulate import tabulate
+import pandas
 
 def pprint_df(dframe):
     print(tabulate(dframe, headers='keys', tablefmt='psql', showindex=False))
