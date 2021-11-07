@@ -48,7 +48,7 @@ elif req=='C':
 
 
 # Output a CSV file with the points and constructor name for a specific constructor over a set time period
-
+"""
 def constructor_stats(constructor, start_year, end_year):
     constructor_points = pandas.DataFrame()
 
@@ -70,4 +70,27 @@ def constructor_stats(constructor, start_year, end_year):
 
 
 constructor_stats('red_bull', 2005, 2020)
+"""
 
+start_year = 2010
+end_year = 2021
+
+constructor_points = pandas.DataFrame()
+
+years = []
+for n in range (start_year, end_year):
+    years.append(n)
+    years.append(n)
+yearcol = pandas.DataFrame({"year": years})
+print(yearcol)
+
+for i in range(start_year, end_year):
+    df = f1.constructor_standings(i)
+    constructor_points = constructor_points.append(df.loc[df['constructorID']=='red_bull'])
+    constructor_points = constructor_points.append(df.loc[df['constructorID']=='mercedes'])
+
+constructor_points = constructor_points[['points', 'name']]
+constructor_points['year'] = yearcol.values
+print(constructor_points)
+fileName = "{}_points_history.csv".format('redbull_merc')
+constructor_points.to_csv(fileName, index=False, encoding='utf-8')
