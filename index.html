@@ -66,7 +66,7 @@ Taha Adamaly
 <container class="bcontainer">
 
   <!--Chart 1 showing Covid Cases by Region -->
-    <div class="chart" id="chart1" tabindex="1">
+    <div class="chart" id="chart1">
         <script>
           var myChart1 = "charts/chart1_covidUKRegions.json";
           vegaEmbed('#chart1', myChart1);
@@ -80,7 +80,7 @@ Taha Adamaly
 <container class="bcontainer">
 
 <!--Chart 2 showing UK productivity levels over time -->
-<div class="chart" id="chart2" tabindex="2"> 
+<div class="chart" id="chart2"> 
   <script>
     var myChart2 = "charts/chart2_ukProductivity.json";
     vegaEmbed('#chart2', myChart2);
@@ -88,7 +88,7 @@ Taha Adamaly
 </div>
 
 <!--Bitcoin Chart Long Run -->
-<div class="chart" id="chartbtc" tabindex="3">
+<div class="chart" id="chartbtc">
   <script>
     var myChartBTC = "charts/bitcoin-graph.json";
     vegaEmbed('#chartbtc', myChartBTC);
@@ -108,7 +108,7 @@ Taha Adamaly
 <container class="bcontainer">
 
 <!--Vaccinations Chart -->
-<div class="chart" id="chartvaccinesAPI" tabindex="4">
+<div class="chart" id="chartvaccinesAPI">
   <script>
     var vaccineChartAPI = "charts/chart_CovidVaccinesAPI.json";
     vegaEmbed('#chartvaccinesAPI', vaccineChartAPI);
@@ -116,7 +116,7 @@ Taha Adamaly
 </div>
 
 <!--Vaccinations Chart 2-->
-<div class="chart" id="chartvaccinesCSV" tabindex="5">
+<div class="chart" id="chartvaccinesCSV">
   <script>
     var vaccineChartCSV = "charts/chart_CovidVaccinesCSV.json";
     vegaEmbed('#chartvaccinesCSV', vaccineChartCSV);
@@ -136,7 +136,7 @@ Taha Adamaly
 <container class="bcontainer">
 
 <!-- Covid Cases Chart: In-line JSON data -->
-<div class="chart" id="chartCovidCasesJSON" tabindex="6">
+<div class="chart" id="chartCovidCasesJSON">
   <script>
     var covidCaseChart = "charts/chart_covidCases.json";
     vegaEmbed('#chartCovidCasesJSON', covidCaseChart);
@@ -144,7 +144,7 @@ Taha Adamaly
 </div>
 
 <!-- Covid Cases Chart: Data from CSV, updated to include one additional line -->
-<div class="chart" id="chartCovidCasesCSV" tabindex="7">
+<div class="chart" id="chartCovidCasesCSV">
   <script>
     var covidCaseChartCSV = "charts/chart_covidCasesCSV.json";
     vegaEmbed('#chartCovidCasesCSV', covidCaseChartCSV);
@@ -154,6 +154,78 @@ Taha Adamaly
 </container>
 
 <!-- ///////////////////  END CONTAINER WITH WEEK 3 WORK //////////////////////////////////// -->
+
+
+<!-- ///////////////////  CONTAINER WITH WEEK 4 WORK //////////////////////////////////// -->
+
+<p class="bodyText"><span style="color: rgb(19, 143, 242); font-weight: 700;">Week 4: </span>Graphs using data from API's</p>
+
+<container class="bcontainer">
+
+<!-- GBP to LKR exchange rate, using an API -->
+<div class="chart" id="chartExchangeRateGBPLKR">
+  <script>
+    var exchangeRateChart = "charts/chart_exchangeRate.json";
+    vegaEmbed('#chartExchangeRateGBPLKR', exchangeRateChart);
+  </script>
+</div>
+
+<!-- US Government 10 year bond yield -->
+<div class="chart" id="chartUSBondYield">
+  <script>
+    var govtBondYield = "charts/chart_govtBondYield.json";
+    vegaEmbed('#chartUSBondYield', govtBondYield);
+  </script>
+</div>
+
+</container>
+
+<!-- ///////////////////  END CONTAINER WITH WEEK 4 WORK //////////////////////////////////// -->
+
+
+
+<!-- ///////////////////  CONTAINER WITH WEEK 5 WORK //////////////////////////////////// -->
+
+<p class="bodyText"><span style="color: rgb(19, 143, 242); font-weight: 700;">Week 4: </span>Graphs using data from API's</p>
+
+<container class="bcontainer">
+
+<!-- Crypto data using an API fetch in python: BTC -->
+<div class="chart" id="chartBTCHistory">
+  <script>
+    var btcHistory = "charts/chart_BTC_history.json";
+    vegaEmbed('#chartBTCHistory', btcHistory);
+  </script>
+</div>
+
+<!-- Crypto data using an API fetch in python: ETH -->
+<div class="chart" id="chartETHHistory">
+  <script>
+    var ethHistory = "charts/chart_ETH_history.json";
+    vegaEmbed('#chartETHHistory', ethHistory);
+  </script>
+</div>
+
+<!-- Crypto data using an API fetch in python: USDT -->
+<div class="chart" id="chartUSDTHistory">
+  <script>
+    var usdtHistory = "charts/chart_USDT_history.json";
+    vegaEmbed('#chartUSDTHistory', usdtHistory);
+  </script>
+</div>
+
+<!-- Crypto data using an API fetch in python: SOL -->
+<div class="chart" id="chartSOLHistory">
+  <script>
+    var solHistory = "charts/chart_SOL_history.json";
+    vegaEmbed('#chartSOLHistory', solHistory);
+  </script>
+</div>
+
+</container>
+
+<!-- ///////////////////  END CONTAINER WITH WEEK 5 WORK //////////////////////////////////// -->
+
 
 
 <!-- ///////////////////  FOOTER //////////////////////////////////// -->

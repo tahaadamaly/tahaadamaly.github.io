@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "title": {
+    "text": "US Government 10 Year Bond Yield",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  
+   "data": {
+    "url": "https://www.alphavantage.co/query?function=TREASURY_YIELD&interval=monthly&maturity=10year&apikey=EKKG6X9XA29E8CA3",
+    "format": {"type": "json"}
+  },
+
+  "height": 300,
+  "width": 310,
+   
+  "mark": {"type": "line", "interpolate": "linear"},
+ 
+  "encoding": {
+
+    "x": {
+      "field": "data.date",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    },
+
+    "y": {
+      "field": "data.value",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"grid": false}
+    }
+}
+}
