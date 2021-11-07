@@ -23,8 +23,8 @@
   
   
 "data": {
-    "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/crypto_BTC_history.json",
-    "format": {"type": "json"}   
+    "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/red_bull_points_history.csv",
+    "format": {"type": "csv"}   
 },
 "mark": {
     "type": "line",
