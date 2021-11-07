@@ -3,8 +3,8 @@
   
   
    "title": {
-    "text": "Bitcoin: long run",
-    "subtitle":"Daily BTC price in USD. Source: NOMICS API",
+    "text": "Bitcoin Price History",
+    "subtitle":"BTC price in USD. Source: NOMICS API",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",
@@ -22,52 +22,22 @@
     "height": 310,
   
   
-    "data": {
-      "name":"myData",
-      "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/charts/crypto/dataFREDbtcCoinbase.csv"},
-  
-  
-    "mark": {
+"data": {
+    "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/crypto_BTC_history.json",
+    "format": {"type": "json"}   
+},
+"mark": {
     "type": "line",
     "point": false,
     "interpolate": "linear",
-    "color":"#d89b00"
+    "color": "#008800"
   },
-  
-  
-    "transform": [
-      {"calculate": "timeParse(datum.DATE, '%d/%m/%Y')", "as": "date"},
-      {"calculate": "year(datum.date)", "as": "year"},
-  
-      {"filter": "datum.year>=minYear"},
-      {"filter": "datum.year<=maxYear"}
-  ],
-  
-    "params": [    
-      {"name":"minYear", "value":2016,
-         "bind":{
-           "input": "range",
-           "min": 2016, 
-           "max": 2021, 
-           "step": 1,
-           "name": "Start year: "}
-      },
-  
-      {"name":"maxYear", "value":2021,
-         "bind":{
-           "input": "range",
-           "min": 2016, 
-           "max": 2021, 
-           "step": 1,
-           "name": "End year: "}
-      }
-    ],
-  
+
     "encoding": {
       
      
     "x": {
-      "field": "date",
+      "field": "timestamp",
       "type": "temporal",
       "axis": {
         "title": null,
@@ -80,7 +50,7 @@
       }},
   
     "y": {
-      "field": "CBBTCUSD",
+      "field": "rate",
       "type": "quantitative",
       "title": "",
       "axis": {

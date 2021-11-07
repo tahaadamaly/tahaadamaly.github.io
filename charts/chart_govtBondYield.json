@@ -15,7 +15,7 @@
   },
 
   "height": 300,
-  "width": 310,
+  "width": "container",
    
   "mark": {"type": "line", "interpolate": "linear"},
  

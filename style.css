@@ -111,13 +111,13 @@ h2 {
   background-color: white;
   border-style: solid;
   border-color: white;
-  border-width: 2px;
+  border-width: 3px;
   border-radius: 25px;
   text-align: center;
   padding: 20px;
-  transition: border-radius 500ms, flex-grow 1000ms;
+  transition: border-radius 400ms, flex-grow 1000ms;
   width: 45%;
-  min-width: 300px;
+  min-width: 350px;
   
 }
 
@@ -125,22 +125,23 @@ h2 {
 
 
 .chart:hover, #chart1:hover {
-  border-color: rgb(224, 70, 8);
+  /*border-color: rgb(224, 70, 8);*/
+  border-color: rgb(19, 117, 197);
   border-radius: 5px;
-  flex-grow: 2;
+  flex-grow: 1;
 }
 
 #chart1{
   background-color: white;
   border-style: solid;
   border-color: white;
-  border-width: 2px;
+  border-width: 3px;
   border-radius: 25px;
   text-align: center;
   padding: 20px;
   transition: padding 500ms, border-radius 500ms;
   width: 100%;
-  min-width: 300px;
+  min-width: 350px;
 }
 
 
