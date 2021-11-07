@@ -1,0 +1,66 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  
+   "title": {
+    "text": "Bitcoin Price History",
+    "subtitle":"BTC price in USD. Source: NOMICS API",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black",
+    "subtitleColor":"black"},
+  
+  "config": {
+    "background":"#FFFFFF",
+    "view": {
+      "stroke": "transparent"}},
+  
+  
+  
+    "width": "container",
+    "height": 310,
+  
+  
+"data": {
+    "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/crypto_BTC_history.json",
+    "format": {"type": "json"}   
+},
+"mark": {
+    "type": "line",
+    "point": false,
+    "interpolate": "linear",
+    "color": "#008800"
+  },
+
+    "encoding": {
+      
+     
+    "x": {
+      "field": "timestamp",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 10,
+        "domainColor":"dimgrey",
+        "labelColor":"black",
+        "tickColor":"black",
+        "gridColor":"dimgrey"
+      }},
+  
+    "y": {
+      "field": "rate",
+      "type": "quantitative",
+      "title": "",
+      "axis": {
+        "grid": false,
+        "domainColor":"dimgrey",
+        "labelColor":"black",
+        "tickColor":"black",
+        "gridColor":"dimgrey",
+        "format":"$,.5"}
+        }
+     }
+  }
+  

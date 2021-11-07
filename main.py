@@ -37,6 +37,7 @@ def get_driver_standings(year):
     pos = df[['position', 'driver', 'points']]
     return pos
 
+
 """
 req = input("Driver or Constructor Standings? (D/C): ")
 if req=='D':
@@ -45,12 +46,18 @@ elif req=='C':
     pprint_df(get_constructor_pos(int(input('Enter year: '))))
 """
 
-winners = []
 
-for i in range(1960, 2020):
-    winners.append((i, get_winning_constructor(i), get_winning_driver(i)))
+# Output a CSV file with the points and constructor name for a specific constructor over a set time period
 
-for i in winners:
-    print(i)
+def constructor_stats(constructor, start_year):
+    constructor_points = pandas.DataFrame()
 
+    for i in range(start_year, 2020):
+        df = f1.constructor_standings(i)
+        constructor_points = constructor_points.append(df.loc[df['constructorID']==constructor])
 
+    constructor_points = constructor_points[['points', 'name']]
+    fileName = "{}_points_history.csv".format(constructor)
+    constructor_points.to_csv(fileName, index=False, encoding='utf-8')
+
+constructor_stats('red_bull', 2004)
