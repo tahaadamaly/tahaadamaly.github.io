@@ -45,6 +45,7 @@ Project Page
 </container>
 
 
+
 <!-- /////////////////// NAVIGATION BUTTONS //////////////////////////////////// -->
 <container class="hcontainer" style="border-bottom: none;">
 <div class="multi-button">
@@ -59,7 +60,32 @@ Project Page
 <!-- /////////////////// END NAVIGATION BUTTONS //////////////////////////////////// -->
 
 
+<!-- ///////////////////  CONTAINER WITH FIRST CHART //////////////////////////////////// -->
 
+<p class="bodyText"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 1: </span>Historical Points and R&D Comparison</p>
+
+<container class="bcontainer">
+
+<!-- RBR and Mercedes Points Chart -->
+<div class="chart" id="chartf1pointsmercredbull">
+  <script>
+    var merc_redbull_points = "charts/chart_redbull_mercedes_points.json";
+    vegaEmbed('#chartf1pointsmercredbull', merc_redbull_points);
+  </script>
+</div>
+
+<!-- RBR R&D expenditure -->
+<div class="chart" id="redbullRD">
+  <script>
+    var redbull_expenditure = "charts/chart_redbull_expenditure.json";
+    vegaEmbed('#redbullRD', redbull_expenditure);
+  </script>
+</div>
+
+
+</container>
+
+<!-- ///////////////////  END CONTAINER WITH FIRST CHART //////////////////////////////////// -->
 
 
 

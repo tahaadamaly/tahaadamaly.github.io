@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Red Bull R&D Expenditure",
+    "anchor": "start",
+    "color": "black"
+  },
+  "height": 300,
+  "width": "container",
+  "data": {
+    "values": [
+      {"year": "2010", "exp": 0}, 
+      {"year": "2011", "exp": 0},
+      {"year": "2012", "exp": 0}, 
+      {"year": "2013", "exp": 249.6}, 
+      {"year": "2014", "exp": 396},
+      {"year": "2015", "exp": 384},
+      {"year": "2016", "exp": 374},
+      {"year": "2017", "exp": 365},
+      {"year": "2018", "exp": 400},
+      {"year": "2019", "exp": 425},
+      {"year": "2020", "exp": 456.7}
+    ]
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "year", 
+      "type": "nominal", 
+      "axis": {"labelAngle": 0}},
+    "y": {
+      "field": "exp", 
+      "type": "quantitative"},
+    "color": {"value": "#8B0000"}
+  }
+}
