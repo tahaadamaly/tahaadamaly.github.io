@@ -122,14 +122,12 @@ h2 {
 }
 
 
-
-
-.chart:hover, #chart1:hover {
-  /*border-color: rgb(224, 70, 8);*/
-  border-color: rgb(19, 117, 197);
-  border-radius: 5px;
-  flex-grow: 1;
+.hide {
+  display: none;
+  font-size: 20px;
+  color: black;
 }
+
 
 #chart1{
   background-color: white;
@@ -144,15 +142,12 @@ h2 {
   min-width: 350px;
 }
 
-
-/*
-.chart:focus {
-  border-color: rgb(224, 70, 8);
-  padding: 60px;
+.chart:hover, #chart1:hover {
+  /*border-color: rgb(224, 70, 8);*/
+  border-color: rgb(19, 117, 197);
   border-radius: 5px;
+  flex-grow: 1;
 }
-*/
-
 /* --------------------------------------END CONTENT IN BODY--------------------------------------------*/
 
 

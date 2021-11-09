@@ -1,6 +1,7 @@
 import formula1 as f1
 from tabulate import tabulate
 import pandas
+import requests
 
 def pprint_df(dframe):
     print(tabulate(dframe, headers='keys', tablefmt='psql', showindex=False))
@@ -70,7 +71,7 @@ def constructor_stats(constructor, start_year, end_year):
 
 
 constructor_stats('red_bull', 2005, 2020)
-"""
+
 
 start_year = 2010
 end_year = 2021
@@ -94,3 +95,6 @@ constructor_points['year'] = yearcol.values
 print(constructor_points)
 fileName = "{}_points_history.csv".format('redbull_merc')
 constructor_points.to_csv(fileName, index=False, encoding='utf-8')
+
+"""
+

@@ -6,6 +6,7 @@ apibase = "https://api.nomics.com/v1/exchange-rates/history?key=09a184e1807679b0
 coinlist = ['BTC', 'ETH', 'USDT', 'SOL']
 fileBase = "crypto_{}_history.json"
 
+# API Fetch for 4 different cryptocurrencies from the Nomics API
 
 for i in coinlist:
     apiurl = apibase.format(i)
