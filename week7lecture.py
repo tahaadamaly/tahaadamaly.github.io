@@ -3,6 +3,8 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from tabulate import tabulate
 
+from formula1 import constructor_standings
+
 
 def pprint_df(dframe):
     print(tabulate(dframe, headers='keys', tablefmt='psql', showindex=False))
@@ -22,6 +24,21 @@ df = pd.DataFrame(good_data)
 df[['date', 'value']].to_csv('my_csv_file.csv')
 """
 
+url ='http://ergast.com/api/f1/{}/constructorStandings.json?limit=1000'
+year = 2020
+html = requests.get(url.format(year))
+
+constructorStandings = html.json()['MRData']['StandingsTable']['StandingsLists'][0]['ConstructorStandings']
+
+for constructor in constructorStandings:
+    constructor['constructorID'] = constructor['Constructor']['constructorId']
+    constructor['name'] = constructor['Constructor']['name']
+    constructor['nationality'] = constructor['Constructor']['nationality']
+    del constructor['Constructor']
+
+df = pd.DataFrame(constructorStandings)
+
+pprint_df(df)
 
 
 # Scraping
@@ -45,7 +62,7 @@ values_list = [int(i.text.replace('£', '').replace(',', '')) for i in values]
 df = pd.DataFrame([headings_list, values_list]).T
 print(df)
 
-"""
+
 
 url='https://www.bloomberg.com/billionaires/'
 
@@ -55,6 +72,8 @@ soup = BeautifulSoup(html.content, 'html.parser')
 
 table = soup.find('div', class_="dvz-content")
 print(table)
+
+"""
 #headings = table.findAll('div', class_="table-cell t-name")
 #values=table.findAll('div', class_='table-cell active t-nw')
 

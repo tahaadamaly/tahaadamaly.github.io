@@ -12,8 +12,9 @@ for i in coinlist:
     apiurl = apibase.format(i)
     data = requests.get(apiurl).json()
     fileName = fileBase.format(i)
-    with open(fileName, 'w', encoding='utf-8') as f:
+    with open('data/{}'.format(fileName), 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
+    # Time delay is added because the API doesn't seem to be able to handle 4 rapid requests, as an error occurs unless this delay is added
     time.sleep(1)
 
 
