@@ -3,7 +3,7 @@ import json
 import time
 
 apibase = "https://api.stlouisfed.org/fred/series/observations?series_id={}&api_key=2677c7ef979aaca29feb223566280265&file_type=json&observation_start=2019-08-01&observation_end=2021-08-01"
-serieslist = ['SWEPFCEQDSMEI']
+serieslist = ['SWEPFCEQDSMEI', 'DNKPFCEQDSMEI']
 fileBase = "fred_consump_{}.json"
 
 # API Fetch for 4 different cryptocurrencies from the Nomics API
