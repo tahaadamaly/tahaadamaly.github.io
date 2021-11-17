@@ -148,6 +148,35 @@ h2 {
   border-radius: 5px;
   flex-grow: 1;
 }
+
+.chart-hw-8{
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+  transition: border-radius 400ms, flex-grow 1000ms;
+  width: 45%;
+  min-width: 350px;
+}
+
+.chart-hw-8:hover {
+  border-color: rgb(19, 117, 197);
+  border-radius: 5px;
+  flex-grow: 0.1;
+}
+
+.text-hw-8 {
+  color: white;
+  margin-bottom: -22px;
+  margin-top: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 21px;
+  font-weight: lighter;
+  text-align: center;
+}
 /* --------------------------------------END CONTENT IN BODY--------------------------------------------*/
 
 
