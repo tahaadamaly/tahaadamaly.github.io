@@ -22,7 +22,7 @@ good_data = json_data[1]
 df = pd.DataFrame(good_data)
 
 df[['date', 'value']].to_csv('my_csv_file.csv')
-"""
+
 
 url ='http://ergast.com/api/f1/{}/constructorStandings.json?limit=1000'
 year = 2020
@@ -40,9 +40,9 @@ df = pd.DataFrame(constructorStandings)
 
 pprint_df(df)
 
-
-# Scraping
 """
+# Scraping
+
 url='https://www.comparethemarket.com/car-insurance/content/global-supercar-index/'
 
 html = requests.get(url)
@@ -73,7 +73,6 @@ soup = BeautifulSoup(html.content, 'html.parser')
 table = soup.find('div', class_="dvz-content")
 print(table)
 
-"""
 #headings = table.findAll('div', class_="table-cell t-name")
 #values=table.findAll('div', class_='table-cell active t-nw')
 
