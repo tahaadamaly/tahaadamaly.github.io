@@ -1,0 +1,27 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Formula 1 Driver Standings 2021",
+        "subtitle":"Source: Scraped from autosport.com using python",
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black",
+        "subtitleColor":"black"},
+    "height": 300,
+    "width": "container",
+    "data": {
+      "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/w7_f1_points.csv",
+      "format": {"type": "csv"}
+    },
+    "mark": {"type":"bar", "tooltip": true},
+    "encoding": {
+      "y": {"field": "driver", "title": "Driver", "sort": "-x"},
+      "x": {
+        "aggregate": "sum", "field": "points",
+        "title": "Points", "axis": {"grid": false}
+      },
+      "color": {"field": "driver", "scale": {"scheme": "inferno"}, "legend": null}
+    }
+  }
+  
