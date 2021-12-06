@@ -194,6 +194,12 @@ h2 {
   height: 100%;
   object-fit: cover;
 }
+
+.image-wk9-container:hover {
+  border-color: rgb(19, 117, 197);
+  border-radius: 5px;
+  flex-grow: 0.1;
+}
 /* --------------------------------------END CONTENT IN BODY--------------------------------------------*/
 
 
