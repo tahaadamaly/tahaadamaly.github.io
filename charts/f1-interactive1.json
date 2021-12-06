@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  
+    "title": {
+      "text": "Formula 1 Driver Points",
+      "subtitle":"2021 Season, Cumulative Points.",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "description": "Coronavirus cases",
+    "data": {
+      "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/f1_2021_top_driver_points.csv",
+      "format": {"type": "csv"}
+    },
+    "height": 300,
+    "width": 500,
+    "config": {"background": "#FfFfFf"},
+    "mark": {"type": "point", "point": true, "size": 50},
+    "selection": {
+      "Driver": {"type": "multi", "fields": ["driver"], "bind": "legend"},
+      "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true},
+      "grid": {"type": "interval", "bind": "scales"}
+    },
+    
+    "encoding": {
+      "x": {
+        "field": "race",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid": false}
+      },
+      "y": {
+        "field": "points",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid": false}
+      },
+      "color": {
+        "field": "driver",
+        "type": "nominal",
+        "scale": {"scheme": "inferno"},
+        "title": null,
+        "legend": {"orient": "bottom", "columns":2, "fillColor": "#FfFfFf"}
+      },
+      "opacity": {"condition": {"selection": "Driver", "value": 1}, "value": 0.1},
+      "tooltip": [
+        {"field": "driver", "type": "nominal", "title": "Driver"},
+        {"field": "points", "type": "quantitative", "title": "Points"},
+        {
+          "field": "race",
+          "type": "quantitative",
+          "title": "Race",
+          "format": ".0f"
+        }
+      ]
+    }
+  }
