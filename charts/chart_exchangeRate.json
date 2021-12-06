@@ -17,22 +17,22 @@
   "height": 300,
   "width": "container",
    
-  "mark": {"type": "line", "interpolate": "linear"},
+  "mark": {"type": "line", "interpolate": "bundle"},
  
   "encoding": {
 
     "x": {
       "field": "date",
       "type": "nominal",
-      "title": null,
-      "axis": {"grid": false, "ticks": false, "labels": false}
+      "title": "Date",
+      "axis": {"grid": false, "ticks": false, "labelOverlap": true, "labelSeparation": 20, "labelAngle": 0}
     },
 
     "y": {
       "field": "rate",
       "type": "nominal",
-      "title": null,
-      "axis": {"grid": false, "labels": false, "ticks": false}
+      "title": "Rate",
+      "axis": {"grid": false, "ticks": false, "labelOverlap": true, "labelSeparation": 20, "labelAngle": 0}
     }
 }
 }

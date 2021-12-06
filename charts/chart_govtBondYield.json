@@ -11,7 +11,7 @@
   
    "data": {
     "url": "https://www.alphavantage.co/query?function=TREASURY_YIELD&interval=monthly&maturity=10year&apikey=EKKG6X9XA29E8CA3",
-    "format": {"type": "json"}
+    "format": {"type": "json", "property": "data"}
   },
 
   "height": 300,
@@ -22,16 +22,16 @@
   "encoding": {
 
     "x": {
-      "field": "data.date",
+      "field": "date",
       "type": "temporal",
-      "title": null,
+      "title": "Date",
       "axis": {"grid": false}
     },
 
     "y": {
-      "field": "data.value",
+      "field": "value",
       "type": "quantitative",
-      "title": null,
+      "title": "Yield %",
       "axis": {"grid": false}
     }
 }
