@@ -3,6 +3,7 @@
   
   "title": {
     "text": "GBP to LKR Exchange Rate",
+    "subtitle": "Data from exchangerate.host API",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",

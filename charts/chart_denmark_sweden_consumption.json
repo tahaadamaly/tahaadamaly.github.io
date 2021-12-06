@@ -4,7 +4,7 @@
 
   "title": {
       "text": "Sweden and Denmark Private Consumption Expenditure",
-      "subtitle":"Source: FRED, Red denotes Sweden, Blue denotes Denmark",
+      "subtitle":"Source: FRED, Blue denotes Sweden, Red denotes Denmark",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
@@ -33,7 +33,7 @@
   "type": "line",
   "point": false,
   "interpolate": "linear",
-  "color":"#FF0000"
+  "color":"blue"
 },
 "encoding": {
     "x": {
@@ -64,7 +64,7 @@
   "type": "line",
   "point": false,
   "interpolate": "linear",
-  "color":"#0000FF"
+  "color":"red"
 },
 "encoding": {
     "x": {
