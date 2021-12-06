@@ -1,93 +1,92 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  
-  
-    "title": {
-        "text": "Sweden and Denmark Private Consumption Expenditure",
-        "subtitle":"Source: FRED, Red denotes Sweden, Blue denotes Denmark",
-        "subtitleFontStyle":"italic",
-        "subtitleFontSize":10,
-        "anchor": "start",
-        "color": "black",
-        "subtitleColor":"black"},
-  
-  "config": {
-    "background":"#FFFFFF",
-    "view": {
-      "stroke": "transparent"}},
-  
-  
-  
-    "width": "container",
-    "height": 310,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  
 
-  "layer": [
-    { 
-  "data": {
-    "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/fred_consump_SWEPFCEQDSMEI.json",
-    "format": {"type": "json", "property": "observations"}   
+  "title": {
+      "text": "Sweden and Denmark Private Consumption Expenditure",
+      "subtitle":"Source: FRED, Red denotes Sweden, Blue denotes Denmark",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black",
+      "subtitleColor":"black"},
+
+"config": {
+  "background":"#FFFFFF",
+  "view": {
+    "stroke": "transparent"}},
+
+
+
+  "width": "container",
+  "height": 310,
+
+
+
+"layer": [
+  { 
+"data": {
+  "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/swe_values_rebased.csv",
+  "format": {"type": "csv"}   
 },
 "mark": {
-    "type": "line",
-    "point": false,
-    "interpolate": "linear",
-    "color":"#FF0000"
-  },
+  "type": "line",
+  "point": false,
+  "interpolate": "linear",
+  "color":"#FF0000"
+},
 "encoding": {
-      "x": {
-        "field": "date",
-        "type": "temporal",
-        "axis": {
-          "title": null,
-          "grid": false,
-          "labelSeparation": 10,
-          "ticks": false
-        }
-      },
-      "y": {
-        "field": "value",
-        "type": "quantitative",
-        "title": "",
-        "axis": {"grid": false},
-        "scale": {"domain": [480000000000, 600000000000]}
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 10,
+        "ticks": false
       }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false},
+      "scale": {"domain": [-3, 3]}
     }
- },
- 
- { 
-  "data": {
-    "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/fred_consump_DNKPFCEQDSMEI.json",
-    "format": {"type": "json", "property": "observations"}   
+  }
+},
+{ 
+"data": {
+  "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/den_values_rebased.csv",
+  "format": {"type": "csv"}   
 },
 "mark": {
-    "type": "line",
-    "point": false,
-    "interpolate": "linear",
-    "color":"#0000FF"
-  },
+  "type": "line",
+  "point": false,
+  "interpolate": "linear",
+  "color":"#0000FF"
+},
 "encoding": {
-      "x": {
-        "field": "date",
-        "type": "temporal",
-        "axis": {
-          "title": null,
-          "grid": false,
-          "labelSeparation": 10,
-          "ticks": false
-        }
-      },
-      "y": {
-        "field": "value",
-        "type": "quantitative",
-        "title": "",
-        "axis": {"grid": false},
-        "scale": {"domain": [200000000000, 600000000000]}
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 10,
+        "ticks": false
       }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false},
+      "scale": {"domain": [-3, 3]}
     }
- }
+  }
+}
 
 ]
- 
+
 }
