@@ -1,7 +1,9 @@
+from typing import Collection
 import formula1 as f1
 from tabulate import tabulate
-import pandas
+import pandas as pd
 import requests
+
 
 def pprint_df(dframe):
     print(tabulate(dframe, headers='keys', tablefmt='psql', showindex=False))
@@ -97,4 +99,3 @@ fileName = "{}_points_history.csv".format('redbull_merc')
 constructor_points.to_csv(fileName, index=False, encoding='utf-8')
 
 """
-
