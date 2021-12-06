@@ -3,7 +3,7 @@
   
     "title": {
       "text": "Formula 1 Driver Points",
-      "subtitle":"2021 Season, Cumulative Points.",
+      "subtitle":"2021 Season, Cumulative Points. Scroll and drag to navigate, Click legend items to focus",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
@@ -12,7 +12,7 @@
   
     "description": "Coronavirus cases",
     "data": {
-      "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/f1_2021_top_driver_points.csv",
+      "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/f1_2021_driver_points.csv",
       "format": {"type": "csv"}
     },
     "height": 300,
@@ -43,17 +43,16 @@
         "type": "nominal",
         "scale": {"scheme": "inferno"},
         "title": null,
-        "legend": {"orient": "bottom", "columns":2, "fillColor": "#FfFfFf"}
+        "legend": {"orient": "bottom", "columns":5, "fillColor": "#FfFfFf"}
       },
       "opacity": {"condition": {"selection": "Driver", "value": 1}, "value": 0.1},
       "tooltip": [
         {"field": "driver", "type": "nominal", "title": "Driver"},
-        {"field": "points", "type": "quantitative", "title": "Points"},
+        {"field": "points", "type": "quantitative", "title": "Total Points"},
         {
-          "field": "race",
-          "type": "quantitative",
-          "title": "Race",
-          "format": ".0f"
+          "field": "race_country",
+          "type": "nominal",
+          "title": "Race"
         }
       ]
     }

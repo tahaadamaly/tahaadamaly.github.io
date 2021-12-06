@@ -200,6 +200,24 @@ h2 {
   border-radius: 5px;
   flex-grow: 0.1;
 }
+
+.chart-interactive{
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+  transition: border-radius 400ms, flex-grow 1000ms;
+  width: 45%;
+  min-width: 350px;
+}
+
+.chart-interactive:hover {
+  border-color: rgb(19, 117, 197);
+  border-radius: 5px;
+}
 /* --------------------------------------END CONTENT IN BODY--------------------------------------------*/
 
 
