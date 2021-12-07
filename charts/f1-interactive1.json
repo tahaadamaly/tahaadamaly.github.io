@@ -16,7 +16,7 @@
       "format": {"type": "csv"}
     },
     "height": 300,
-    "width": 500,
+    "width": "container",
     "config": {"background": "#FfFfFf"},
     "mark": {"type": "point", "point": true, "size": 50},
     "selection": {
