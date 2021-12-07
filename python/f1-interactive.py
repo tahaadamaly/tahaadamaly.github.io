@@ -16,12 +16,13 @@ for i in range(1, 22):
     master_data = master_data.append(df)
 
 # Delete any drivers not in the top 10 as of round 21
+"""
 for x in master_data['driverID']:
     if x not in top_ten_drivers:
         master_data.drop(master_data.index[master_data['driverID'] == x], inplace=True)
+"""
 
-
-#master_data.to_csv('data/f1_2021_top_driver_points.csv')
+master_data.to_csv('data/f1_2021_driver_points.csv')
 
 
 
