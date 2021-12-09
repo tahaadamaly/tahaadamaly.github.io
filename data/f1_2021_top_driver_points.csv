@@ -7,6 +7,8 @@
 5,Charles Leclerc,8,leclerc,1,Bahrain
 6,Daniel Ricciardo,6,ricciardo,1,Bahrain
 7,Carlos Sainz,4,sainz,1,Bahrain
+16,Pierre Gasly,0,gasly,1,Bahrain
+18,Fernando Alonso,0,alonso,1,Bahrain
 0,Lewis Hamilton,44,hamilton,2,Italy
 1,Max Verstappen,43,max_verstappen,2,Italy
 2,Lando Norris,27,norris,2,Italy
@@ -15,6 +17,8 @@
 5,Carlos Sainz,14,sainz,2,Italy
 6,Daniel Ricciardo,14,ricciardo,2,Italy
 7,Sergio Pérez,10,perez,2,Italy
+8,Pierre Gasly,6,gasly,2,Italy
+12,Fernando Alonso,1,alonso,2,Italy
 0,Lewis Hamilton,69,hamilton,3,Portugal
 1,Max Verstappen,61,max_verstappen,3,Portugal
 2,Lando Norris,37,norris,3,Portugal
@@ -23,6 +27,8 @@
 5,Sergio Pérez,22,perez,3,Portugal
 6,Daniel Ricciardo,16,ricciardo,3,Portugal
 7,Carlos Sainz,14,sainz,3,Portugal
+9,Pierre Gasly,7,gasly,3,Portugal
+11,Fernando Alonso,5,alonso,3,Portugal
 0,Lewis Hamilton,94,hamilton,4,Spain
 1,Max Verstappen,80,max_verstappen,4,Spain
 2,Valtteri Bottas,47,bottas,4,Spain
@@ -31,6 +37,8 @@
 5,Sergio Pérez,32,perez,4,Spain
 6,Daniel Ricciardo,24,ricciardo,4,Spain
 7,Carlos Sainz,20,sainz,4,Spain
+9,Pierre Gasly,8,gasly,4,Spain
+11,Fernando Alonso,5,alonso,4,Spain
 0,Max Verstappen,105,max_verstappen,5,Monaco
 1,Lewis Hamilton,101,hamilton,5,Monaco
 2,Lando Norris,56,norris,5,Monaco
@@ -39,6 +47,8 @@
 5,Charles Leclerc,40,leclerc,5,Monaco
 6,Carlos Sainz,38,sainz,5,Monaco
 7,Daniel Ricciardo,24,ricciardo,5,Monaco
+8,Pierre Gasly,16,gasly,5,Monaco
+12,Fernando Alonso,5,alonso,5,Monaco
 0,Max Verstappen,105,max_verstappen,6,Azerbaijan
 1,Lewis Hamilton,101,hamilton,6,Azerbaijan
 2,Sergio Pérez,69,perez,6,Azerbaijan
@@ -47,6 +57,8 @@
 5,Valtteri Bottas,47,bottas,6,Azerbaijan
 6,Carlos Sainz,42,sainz,6,Azerbaijan
 7,Pierre Gasly,31,gasly,6,Azerbaijan
+9,Daniel Ricciardo,26,ricciardo,6,Azerbaijan
+10,Fernando Alonso,13,alonso,6,Azerbaijan
 0,Max Verstappen,131,max_verstappen,7,France
 1,Lewis Hamilton,119,hamilton,7,France
 2,Sergio Pérez,84,perez,7,France
@@ -55,6 +67,8 @@
 5,Charles Leclerc,52,leclerc,7,France
 6,Carlos Sainz,42,sainz,7,France
 7,Pierre Gasly,37,gasly,7,France
+8,Daniel Ricciardo,34,ricciardo,7,France
+10,Fernando Alonso,17,alonso,7,France
 0,Max Verstappen,156,max_verstappen,8,Austria
 1,Lewis Hamilton,138,hamilton,8,Austria
 2,Sergio Pérez,96,perez,8,Austria
@@ -63,6 +77,8 @@
 5,Charles Leclerc,58,leclerc,8,Austria
 6,Carlos Sainz,50,sainz,8,Austria
 7,Pierre Gasly,37,gasly,8,Austria
+8,Daniel Ricciardo,34,ricciardo,8,Austria
+10,Fernando Alonso,19,alonso,8,Austria
 0,Max Verstappen,182,max_verstappen,9,Austria
 1,Lewis Hamilton,150,hamilton,9,Austria
 2,Sergio Pérez,104,perez,9,Austria
@@ -71,6 +87,8 @@
 5,Charles Leclerc,62,leclerc,9,Austria
 6,Carlos Sainz,60,sainz,9,Austria
 7,Daniel Ricciardo,40,ricciardo,9,Austria
+8,Pierre Gasly,39,gasly,9,Austria
+10,Fernando Alonso,20,alonso,9,Austria
 0,Max Verstappen,185,max_verstappen,10,Great Britain
 1,Lewis Hamilton,177,hamilton,10,Great Britain
 2,Lando Norris,113,norris,10,Great Britain
@@ -79,6 +97,8 @@
 5,Charles Leclerc,80,leclerc,10,Great Britain
 6,Carlos Sainz,68,sainz,10,Great Britain
 7,Daniel Ricciardo,50,ricciardo,10,Great Britain
+8,Pierre Gasly,39,gasly,10,Great Britain
+10,Fernando Alonso,26,alonso,10,Great Britain
 0,Lewis Hamilton,195,hamilton,11,Hungary
 1,Max Verstappen,187,max_verstappen,11,Hungary
 2,Lando Norris,113,norris,11,Hungary
@@ -87,6 +107,8 @@
 5,Carlos Sainz,83,sainz,11,Hungary
 6,Charles Leclerc,80,leclerc,11,Hungary
 7,Pierre Gasly,50,gasly,11,Hungary
+8,Daniel Ricciardo,50,ricciardo,11,Hungary
+10,Fernando Alonso,38,alonso,11,Hungary
 0,Lewis Hamilton,202.5,hamilton,12,Belgium
 1,Max Verstappen,199.5,max_verstappen,12,Belgium
 2,Lando Norris,113,norris,12,Belgium
@@ -95,6 +117,8 @@
 5,Carlos Sainz,83.5,sainz,12,Belgium
 6,Charles Leclerc,82,leclerc,12,Belgium
 7,Daniel Ricciardo,56,ricciardo,12,Belgium
+8,Pierre Gasly,54,gasly,12,Belgium
+10,Fernando Alonso,38,alonso,12,Belgium
 0,Max Verstappen,224.5,max_verstappen,13,Netherlands
 1,Lewis Hamilton,221.5,hamilton,13,Netherlands
 2,Valtteri Bottas,123,bottas,13,Netherlands
@@ -103,6 +127,8 @@
 5,Charles Leclerc,92,leclerc,13,Netherlands
 6,Carlos Sainz,89.5,sainz,13,Netherlands
 7,Pierre Gasly,66,gasly,13,Netherlands
+8,Daniel Ricciardo,56,ricciardo,13,Netherlands
+9,Fernando Alonso,46,alonso,13,Netherlands
 0,Max Verstappen,226.5,max_verstappen,14,Italy
 1,Lewis Hamilton,221.5,hamilton,14,Italy
 2,Valtteri Bottas,141,bottas,14,Italy
@@ -111,6 +137,8 @@
 5,Charles Leclerc,104,leclerc,14,Italy
 6,Carlos Sainz,97.5,sainz,14,Italy
 7,Daniel Ricciardo,83,ricciardo,14,Italy
+8,Pierre Gasly,66,gasly,14,Italy
+9,Fernando Alonso,50,alonso,14,Italy
 0,Lewis Hamilton,246.5,hamilton,15,Russia
 1,Max Verstappen,244.5,max_verstappen,15,Russia
 2,Valtteri Bottas,151,bottas,15,Russia
@@ -119,6 +147,8 @@
 5,Carlos Sainz,112.5,sainz,15,Russia
 6,Charles Leclerc,104,leclerc,15,Russia
 7,Daniel Ricciardo,95,ricciardo,15,Russia
+8,Pierre Gasly,66,gasly,15,Russia
+9,Fernando Alonso,58,alonso,15,Russia
 0,Max Verstappen,262.5,max_verstappen,16,Turkey
 1,Lewis Hamilton,256.5,hamilton,16,Turkey
 2,Valtteri Bottas,177,bottas,16,Turkey
@@ -127,6 +157,8 @@
 5,Carlos Sainz,116.5,sainz,16,Turkey
 6,Charles Leclerc,116,leclerc,16,Turkey
 7,Daniel Ricciardo,95,ricciardo,16,Turkey
+8,Pierre Gasly,74,gasly,16,Turkey
+9,Fernando Alonso,58,alonso,16,Turkey
 0,Max Verstappen,287.5,max_verstappen,17,United States
 1,Lewis Hamilton,275.5,hamilton,17,United States
 2,Valtteri Bottas,185,bottas,17,United States
@@ -135,6 +167,8 @@
 5,Charles Leclerc,128,leclerc,17,United States
 6,Carlos Sainz,122.5,sainz,17,United States
 7,Daniel Ricciardo,105,ricciardo,17,United States
+8,Pierre Gasly,74,gasly,17,United States
+9,Fernando Alonso,58,alonso,17,United States
 0,Max Verstappen,312.5,max_verstappen,18,Mexico
 1,Lewis Hamilton,293.5,hamilton,18,Mexico
 2,Valtteri Bottas,185,bottas,18,Mexico
@@ -143,6 +177,8 @@
 5,Charles Leclerc,138,leclerc,18,Mexico
 6,Carlos Sainz,130.5,sainz,18,Mexico
 7,Daniel Ricciardo,105,ricciardo,18,Mexico
+8,Pierre Gasly,86,gasly,18,Mexico
+9,Fernando Alonso,60,alonso,18,Mexico
 0,Max Verstappen,332.5,max_verstappen,19,Brazil
 1,Lewis Hamilton,318.5,hamilton,19,Brazil
 2,Valtteri Bottas,203,bottas,19,Brazil
@@ -151,6 +187,8 @@
 5,Charles Leclerc,148,leclerc,19,Brazil
 6,Carlos Sainz,139.5,sainz,19,Brazil
 7,Daniel Ricciardo,105,ricciardo,19,Brazil
+8,Pierre Gasly,92,gasly,19,Brazil
+9,Fernando Alonso,62,alonso,19,Brazil
 0,Max Verstappen,351.5,max_verstappen,20,Qatar
 1,Lewis Hamilton,343.5,hamilton,20,Qatar
 2,Valtteri Bottas,203,bottas,20,Qatar
@@ -159,6 +197,8 @@
 5,Charles Leclerc,152,leclerc,20,Qatar
 6,Carlos Sainz,145.5,sainz,20,Qatar
 7,Daniel Ricciardo,105,ricciardo,20,Qatar
+8,Pierre Gasly,92,gasly,20,Qatar
+9,Fernando Alonso,77,alonso,20,Qatar
 0,Max Verstappen,369.5,max_verstappen,21,Saudi Arabia
 1,Lewis Hamilton,369.5,hamilton,21,Saudi Arabia
 2,Valtteri Bottas,218,bottas,21,Saudi Arabia
@@ -167,3 +207,5 @@
 5,Lando Norris,154,norris,21,Saudi Arabia
 6,Carlos Sainz,149.5,sainz,21,Saudi Arabia
 7,Daniel Ricciardo,115,ricciardo,21,Saudi Arabia
+8,Pierre Gasly,100,gasly,21,Saudi Arabia
+9,Fernando Alonso,77,alonso,21,Saudi Arabia
