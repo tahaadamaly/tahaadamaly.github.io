@@ -24,7 +24,8 @@ sumstat = df.agg(
         "debit_card_used_12m": ["mean", "std", "min", "max"],
     }
  )
+print(df.head(10))
 
-df.to_stata('AED/CLeanedFiles/masterdata.dta')
+df.to_stata('AED/CLeanedFiles/masterdata_updated.dta')
 
 #sumstat.T.to_excel('AED/CleanedFiles/sumstats.xlsx')

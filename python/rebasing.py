@@ -27,10 +27,8 @@ sweden_dataset = {}
 denmark_dataset = {}
 
 # Sweden data
-for m in swe_data['observations']:
-    swe_dates.append(m['date'])
-
 for i in swe_data['observations']:
+    swe_dates.append(i['date'])
     sweden_values.append(float(i['value']))
 
 for y in sweden_values:
@@ -43,9 +41,7 @@ for r in range(len(swe_dates)):
 # Denmark data
 for n in den_data['observations']:
     den_dates.append(n['date'])
-
-for x in den_data['observations']:
-    denmark_values.append(float(x['value']))
+    denmark_values.append(float(n['value']))
 
 for z in denmark_values:
     denmark_values_rebased.append(z_score(z, denmark_values))
@@ -69,5 +65,5 @@ sweden_df.rename(columns={0 : 'date', 1: 'value'}, inplace=True)
 print(denmark_df)
 print(sweden_df)
 
-denmark_df.to_csv('data/den_values_rebased.csv')
-sweden_df.to_csv('data/swe_values_rebased.csv')
+#denmark_df.to_csv('data/den_values_rebased.csv')
+#sweden_df.to_csv('data/swe_values_rebased.csv')

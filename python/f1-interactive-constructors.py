@@ -9,7 +9,7 @@ race_country = ['Bahrain', 'Italy', 'Portugal', 'Spain', 'Monaco', 'Azerbaijan',
 
 
 for i in range(2000, 2022):
-    df = f1.constructor_standings(2021)
+    df = f1.constructor_standings(i)
     df = df[['name', 'points', 'constructorID']]
     df['year'] = i
     master_data = master_data.append(df)
