@@ -20,8 +20,8 @@
   
   "width": "container",
   
-  "mark": {"type": "bar", "size": 12},
-  
+  "mark": {"type": "bar", "size": 13},
+    
   "selection": {
     "Year": {
       "type": "single",
@@ -62,6 +62,10 @@
       "type": "nominal",
       "legend": null,
       "scale": {"scheme": "inferno"}
-    }
+    },
+       "tooltip": [
+      {"field": "name", "type": "nominal", "title": "Constructor"},
+      {"field": "points", "type": "quantitative", "title": "Total Points"}
+    ]
   }
 }
