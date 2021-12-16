@@ -3,14 +3,15 @@
 
   "title": {
     "text": "Formula 1 Driver Points",
-    "subtitle":"Top 10 Drivers, 2021 Season, Cumulative Points. Scroll and drag to navigate, Click legend items to focus",
+    "subtitle": "2021 Season, by race",
     "subtitleFontStyle":"italic",
+    
     "subtitleFontSize":10,
     "anchor": "start",
     "color": "black"
   },
 
-  "description": "Coronavirus cases",
+  "description": "F1 Driver Points",
   "data": {
     "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/f1_2021_top_driver_points.csv",
     "format": {"type": "csv"}
@@ -45,7 +46,7 @@
       "type": "nominal",
       "scale": {"scheme": "inferno"},
       "title": null,
-      "legend": {"orient": "bottom", "columns":5, "fillColor": "#FfFfFf"}
+      "legend": {"orient": "bottom", "columns": 2, "fillColor": "#FfFfFf"}
     },
     "opacity": {"condition": {"selection": "Driver", "value": 1}, "value": 0.05},
     "tooltip": [
