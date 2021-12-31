@@ -15,7 +15,7 @@
     "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/f1_constr_points_yearly.csv",
     "format": {"type": "csv"}
   },
-
+  
   "height": 300,
   
   "width": "container",

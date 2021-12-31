@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+    "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/python/F1Project/qualirace.csv"
+    },
+    "width": "container",
+    "height": 310,
+    "layer": [
+      {
+        "mark": {
+          "type": "point",
+          "filled": true
+        },
+        "encoding": {
+          "x": {
+            "field": "qualipos",
+            "type": "quantitative",
+            "title": "Qualifying Position"
+          },
+          "y": {
+            "field": "racepos",
+            "type": "quantitative",
+            "title": "Final Race Position"
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "line",
+          "color": "firebrick"
+        },
+        "transform": [
+          {
+            "loess": "racepos",
+            "on": "qualipos"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "qualipos",
+            "type": "quantitative"
+          },
+          "y": {
+            "field": "racepos",
+            "type": "quantitative"
+          }
+        }
+      }
+    ]
+  }
+  

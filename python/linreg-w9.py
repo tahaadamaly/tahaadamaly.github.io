@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import PolynomialFeatures
-from  scipy import stats
+from scipy import stats
 from scipy.stats import linregress
 
 # Setting up dataframes with stock data and cleaning dataframes

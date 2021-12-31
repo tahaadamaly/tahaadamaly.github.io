@@ -64,7 +64,7 @@ Project Page
 
 <p class="bodyText"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 1: </span>Historical Points and R&D Comparison</p>
 
-<container class="bcontainer">
+<container class="bcontainer-project">
 
 <!-- RBR and Mercedes Points Chart -->
 <div class="chart" id="chartf1pointsmercredbull">
@@ -88,6 +88,29 @@ Project Page
 <!-- ///////////////////  END CONTAINER WITH FIRST CHART //////////////////////////////////// -->
 
 
+<p class="bodyText"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 2: </span>Relationship between qualifying and race position</p>
+
+<container class="bcontainer-project">
+
+<!-- Quali-Race Correlation Chart -->
+<div class="chart-hw-8" id="qualiracecorr">
+  <script>
+    var quali_race_corr = "charts/project_qualirace.json";
+    vegaEmbed('#qualiracecorr', quali_race_corr);
+  </script>
+ </div>
+ <span>
+ <div class="bodyTextProject", style="width: 50%;">This chart presents the correlation between the position attained during the qualifying session and the final race outcome. There are 7624 observations from the years 1996 - 2021.
+The correlation coefficient is 0.54 and is significant,
+showing that there is a positive correlation between
+qualifying position and race outcome. It is surprising
+ though that the R-squared value is only 0.28
+ as I had expected this to be higher
+</div>
+</span>
+<!--  , -->
+
+</container>
 
 
 <!-- ///////////////////  FOOTER //////////////////////////////////// -->
