@@ -1,0 +1,69 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  
+  "title": {
+      "text": "Formula 1: Constructor R&D Expenditure",
+      "subtitle":"Yearly estimated R&D expenditure by constructor",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "description": "F1 Data",
+    "data": {
+      "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/R%26D_Data.csv",
+      "format": {"type": "csv"}
+    },
+    
+    "height": 300,
+    
+    "width": "container",
+    
+    "mark": {"type": "bar", "size": 40},
+      
+    "selection": {
+      "Team": {
+        "type": "single",
+        "fields": ["team"],
+        "bind": {
+          "input": "select",
+          "options": [
+            null, "mercedes", "red_bull", "ferrari", "mclaren", "alpine", "alphatauri", "aston_martin", "williams", "alfa_romeo"
+          ],
+          "name": "Select a Team: "
+        }
+      }
+    },
+    "transform": [
+      {"filter": {"selection": "Team"}}
+    ],
+  
+    "encoding": {
+      "x": {
+        "field": "year", 
+        "type": "nominal", 
+        "title": null},
+      "y": {
+        "field": "points",
+        "type": "quantitative",
+        "title": null,
+        "axis": {
+          "grid": false
+        }
+      },
+      
+        
+      "color": {
+        "field": "team",
+        "type": "nominal",
+        "legend": null,
+        "scale": {"scheme": "inferno"}
+      },
+         "tooltip": [
+        {"field": "team", "type": "nominal", "title": "Constructor"},
+        {"field": "points", "type": "quantitative", "title": "Total Points"}
+      ]
+    }
+  }
+  
