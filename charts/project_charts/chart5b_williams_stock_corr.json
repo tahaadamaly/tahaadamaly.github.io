@@ -1,0 +1,82 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/williams-points-stockprice.csv",
+      "format": {"type": "csv"}
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "point",
+          "filled": false
+        },
+        "encoding": {
+          "x": {
+            "field": "stock",
+            "type": "quantitative",
+            "scale": {"domain": [10, 25]},
+            "title": "Stock Price"
+          },
+          "y": {
+            "field": "points",
+            "type": "quantitative",
+            "title": "Points Scored"
+          },
+          "color": {
+            "field": "year",
+            "type": "quantitative",
+            "legend": null,
+            "scale": {"scheme": "category10"}
+        },
+           "tooltip": [
+            {"field": "year", "type": "quantitative", "title": "Year"},
+            {"field": "points", "type": "quantitative", "title": "Total Points"},
+            {"field": "stock", "type": "quantitative", "title": "Average Stock Price"}
+        ]
+        }
+      },
+      {
+        "mark": {
+          "type": "line",
+          "color": "firebrick"
+        },
+        "transform": [
+          {
+            "regression": "stock",
+            "on": "points"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "stock",
+            "type": "quantitative"
+          },
+          "y": {
+            "field": "points",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "transform": [
+          {
+            "regression": "stock",
+            "on": "points",
+            "params": true
+          },
+          {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+        ],
+        "mark": {
+          "type": "text",
+          "color": "firebrick",
+          "x": "width",
+          "align": "right",
+          "y": -5
+        },
+        "encoding": {
+          "text": {"type": "nominal", "field": "R2"}
+        }
+      }
+    ]
+  }
+  
