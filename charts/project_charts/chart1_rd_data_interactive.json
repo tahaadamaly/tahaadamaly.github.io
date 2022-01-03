@@ -63,7 +63,7 @@
       },
          "tooltip": [
         {"field": "team", "type": "nominal", "title": "Constructor"},
-        {"field": "expenditure", "type": "quantitative", "title": "Total Points"}
+        {"field": "expenditure", "type": "quantitative", "title": "Total Expenditure (US$, M)"}
       ]
     }
   }

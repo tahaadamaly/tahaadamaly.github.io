@@ -60,60 +60,65 @@ Project Page
 <!-- /////////////////// END NAVIGATION BUTTONS //////////////////////////////////// -->
 
 
-<!-- ///////////////////  CONTAINER WITH FIRST CHART //////////////////////////////////// -->
+<!-- /////////////////// INTRO TEXT //////////////////////////////////// -->
+<p class="project-page-text"><span style="font-weight: 700;">The Money Factor - </span> 
+Does R&D expenditure explain the drastic difference in performance between teams in Formula 1?<br>
+This project aims to analyse the expenditure that constructors (teams) in Formula 1 spend on research and development, 
+and how this translates to improved performance in races, measured by total points scored by teams in a season. This data has interesting implications, especially if the R&D data is available before the race season is completed,
+as this means that predictions can be made for the outcomes of constructors championships at the end of the year. However, there are a number of complex factors at play in addition to 
+R&D expenditure which affects race outcomes, so this project will simply build on this one area and will not consider factors that are difficult to quantify, such as driver skill.
+</p><br><br>
 
-<p class="bodyText"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 1: </span>Yearly R&D Expenditure by Constructor</p>
 
+<!-- /////////////////// SECTION 1 //////////////////////////////////// -->
+<p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 1: </span>Yearly R&D Expenditure by Constructor</p><br>
+<p class="project-page-text">
+This section presents the R&D expenditure for 9 of the teams in Formula 1 between 2012 and 2020. Individual teams R&D expenditure can be seen by selecting from the dropdown list below the chart.
+The data presented here was obtained from different sources for each year, including article posts on motorsports journalism websites. The full source list can be found <a>here</a>.
+There were some issues with data collection for this section. Most of the teams in Formula 1 do not publicly disclose their expenditure on R&D and so the data presented is obtained by estimates from past expenditure, 
+as well as data that is derived from the financial statements of the holding companies of some of the teams.
+</p>
+<!-- ///////////////////  CONTAINER WITH SECTION 1 CHART //////////////////////////////////// -->
 <container class="bcontainer-project">
 
-<!-- RBR and Mercedes Points Chart -->
-<!--
-<div class="chart" id="chartf1pointsmercredbull">
-  <script>
-    var merc_redbull_points = "charts/chart_redbull_mercedes_points.json";
-    vegaEmbed('#chartf1pointsmercredbull', merc_redbull_points);
-  </script>
-</div>
 
-<div class="chart" id="redbullRD">
-  <script>
-    var redbull_expenditure = "charts/chart_redbull_expenditure.json";
-    vegaEmbed('#redbullRD', redbull_expenditure);
-  </script>
-</div>
--->
-<div class="chart" id="f1rdexp">
+<div class="chart-project-section1" id="f1rdexp">
   <script>
     var rd_exp = "charts/project_charts/chart1_rd_data_interactive.json";
     vegaEmbed('#f1rdexp', rd_exp);
   </script>
 </div>
+
+<p class="project-page-text">
+As can be seen on first chart, R&D expenditure varies per team, with some of the top teams spending many multiples of what smaller teams spend. 
+However, expenditure across time for teams remains relatively consistent. The data collected here presents many challenges, the main one being replicability and reliability.
+Each year, different online articles on different sites come up with estimated expenditures for teams, there is no one source of consistent and reliable information available. 
+Therefore, this section must be manually updated. This is not a significant issue given the frequency of data, as the data only needs to be updated once a year.
+This data was manually entered into an excel sheet and converted into a CSV file, which was then entered into a vega-lite specification.
+
+</p>
 </container>
+<br>
 
 <!-- ///////////////////  END CONTAINER WITH FIRST CHART //////////////////////////////////// -->
 
 
-<p class="bodyText"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 2: </span>Relationship between qualifying and race position</p>
+<!-- /////////////////// SECTION 2 //////////////////////////////////// -->
+<p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 2: </span>Historical constructor standings</p>
+<br>
+<p class="project-page-text">
+This section presents the other side of our question. How well do each of the 9 teams selected perform each year? This data was obtained from the Ergast Formula 1 API which was accessed through python.
+This shows that the teams at the top end with large budgets, such as Mercedes, Red Bull and Ferrari generally perform better than the midfield teams.
 
+</p>
+<br>
 <container class="bcontainer-project">
 
-<!-- Quali-Race Correlation Chart -->
-<div class="chart-hw-8" id="qualiracecorr">
-  <script>
-    var quali_race_corr = "charts/project_qualirace.json";
-    vegaEmbed('#qualiracecorr', quali_race_corr);
-  </script>
- </div>
- <span>
- <div class="bodyTextProject", style="width: 50%;">This chart presents the correlation between the position attained during the qualifying session and the final race outcome. There are 7624 observations from the years 1996 - 2021.
-The correlation coefficient is 0.54 and is significant,
-showing that there is a positive correlation between
-qualifying position and race outcome. It is surprising
- though that the R-squared value is only 0.28
- as I had expected this to be higher
-</div>
-</span>
-<!--  , -->
+
+
+
+
+
 
 </container>
 

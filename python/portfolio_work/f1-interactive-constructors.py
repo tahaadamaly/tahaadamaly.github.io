@@ -12,7 +12,7 @@ for i in range(2000, 2022):
 
 print(master_data)
 
-master_data.to_csv('data/f1_constr_points_yearly.csv')
+#master_data.to_csv('data/f1_constr_points_yearly.csv')
 
 
 

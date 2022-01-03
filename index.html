@@ -50,7 +50,7 @@ Portfolio and Home Page
 <div class="multi-button">
 
   <button style="color: rgb(17, 143, 242);" onclick="location.href='index.html'">portfolio</button>
-  <button onclick="location.href='project_page.html'">project</button>
+  <button onclick="location.href='project_page1.html'">project</button>
   <button onclick="location.href='https://github.com/tahaadamaly/tahaadamaly.github.io'">github</button>
   <button onclick="location.href='https://rapidcharts.io/datascience'">course</button>
 
@@ -70,7 +70,7 @@ Portfolio and Home Page
 
     <div class="chart" id="chart1">
         <script>
-          var myChart1 = "charts/chart1_covidUKRegions.json";
+          var myChart1 = "charts/portfolio_charts/chart1_covidUKRegions.json";
           vegaEmbed('#chart1', myChart1);
         </script>
 
@@ -86,7 +86,7 @@ Portfolio and Home Page
 
   <div class="chart" id="chart2"> 
     <script>
-      var myChart2 = "charts/chart2_ukProductivity.json";
+      var myChart2 = "charts/portfolio_charts/chart2_ukProductivity.json";
       vegaEmbed('#chart2', myChart2);
     </script>
   </div>
@@ -94,7 +94,7 @@ Portfolio and Home Page
 <!--Bitcoin Chart Long Run -->
 <div class="chart" id="chartbtc">
   <script>
-    var myChartBTC = "charts/bitcoin-graph.json";
+    var myChartBTC = "charts/portfolio_charts/bitcoin-graph.json";
     vegaEmbed('#chartbtc', myChartBTC);
   </script>
 </div>
@@ -114,7 +114,7 @@ Portfolio and Home Page
 <!--Vaccinations Chart -->
 <div class="chart" id="chartvaccinesAPI">
   <script>
-    var vaccineChartAPI = "charts/chart_CovidVaccinesAPI.json";
+    var vaccineChartAPI = "charts/portfolio_charts/chart_CovidVaccinesAPI.json";
     vegaEmbed('#chartvaccinesAPI', vaccineChartAPI);
   </script>
 </div>
@@ -122,7 +122,7 @@ Portfolio and Home Page
 <!--Vaccinations Chart 2-->
 <div class="chart" id="chartvaccinesCSV">
   <script>
-    var vaccineChartCSV = "charts/chart_CovidVaccinesCSV.json";
+    var vaccineChartCSV = "charts/portfolio_charts/chart_CovidVaccinesCSV.json";
     vegaEmbed('#chartvaccinesCSV', vaccineChartCSV);
   </script>
 </div>
@@ -142,7 +142,7 @@ Portfolio and Home Page
 <!-- Covid Cases Chart: In-line JSON data -->
 <div class="chart" id="chartCovidCasesJSON">
   <script>
-    var covidCaseChart = "charts/chart_covidCases.json";
+    var covidCaseChart = "charts/portfolio_charts/chart_covidCases.json";
     vegaEmbed('#chartCovidCasesJSON', covidCaseChart);
   </script>
 </div>
@@ -150,7 +150,7 @@ Portfolio and Home Page
 <!-- Covid Cases Chart: Data from CSV, updated to include one additional line -->
 <div class="chart" id="chartCovidCasesCSV">
   <script>
-    var covidCaseChartCSV = "charts/chart_covidCasesCSV.json";
+    var covidCaseChartCSV = "charts/portfolio_charts/chart_covidCasesCSV.json";
     vegaEmbed('#chartCovidCasesCSV', covidCaseChartCSV);
   </script>
 </div>
@@ -170,7 +170,7 @@ Portfolio and Home Page
 <!-- GBP to LKR exchange rate, using an API -->
 <div class="chart" id="chartExchangeRateGBPLKR">
   <script>
-    var exchangeRateChart = "charts/chart_exchangeRate.json";
+    var exchangeRateChart = "charts/portfolio_charts/chart_exchangeRate.json";
     vegaEmbed('#chartExchangeRateGBPLKR', exchangeRateChart);
   </script>
 </div>
@@ -178,7 +178,7 @@ Portfolio and Home Page
 <!-- US Government 10 year bond yield -->
 <div class="chart" id="chartUSBondYield">
   <script>
-    var govtBondYield = "charts/chart_govtBondYield.json";
+    var govtBondYield = "charts/portfolio_charts/chart_govtBondYield.json";
     vegaEmbed('#chartUSBondYield', govtBondYield);
   </script>
 </div>
@@ -198,7 +198,7 @@ Portfolio and Home Page
 <!-- Crypto data using an API fetch in python: BTC -->
 <div class="chart" id="chartBTCHistory">
   <script>
-    var btcHistory = "charts/chart_BTC_history.json";
+    var btcHistory = "charts/portfolio_charts/chart_BTC_history.json";
     vegaEmbed('#chartBTCHistory', btcHistory);
   </script>
 </div>
@@ -206,7 +206,7 @@ Portfolio and Home Page
 <!-- Crypto data using an API fetch in python: ETH -->
 <div class="chart" id="chartETHHistory">
   <script>
-    var ethHistory = "charts/chart_ETH_history.json";
+    var ethHistory = "charts/portfolio_charts/chart_ETH_history.json";
     vegaEmbed('#chartETHHistory', ethHistory);
   </script>
 </div>
@@ -214,7 +214,7 @@ Portfolio and Home Page
 <!-- Crypto data using an API fetch in python: USDT -->
 <div class="chart" id="chartUSDTHistory">
   <script>
-    var usdtHistory = "charts/chart_USDT_history.json";
+    var usdtHistory = "charts/portfolio_charts/chart_USDT_history.json";
     vegaEmbed('#chartUSDTHistory', usdtHistory);
   </script>
 </div>
@@ -222,7 +222,7 @@ Portfolio and Home Page
 <!-- Crypto data using an API fetch in python: SOL -->
 <div class="chart" id="chartSOLHistory">
   <script>
-    var solHistory = "charts/chart_SOL_history.json";
+    var solHistory = "charts/portfolio_charts/chart_SOL_history.json";
     vegaEmbed('#chartSOLHistory', solHistory);
   </script>
 </div>
@@ -241,7 +241,7 @@ Portfolio and Home Page
 
   <div class="chart-hw-8" id="chartf1points">
     <script>
-      var f1_driver_points = "charts/webscraper_f1_chart.json";
+      var f1_driver_points = "charts/portfolio_charts/webscraper_f1_chart.json";
       vegaEmbed('#chartf1points', f1_driver_points);
     </script>
   </div>
@@ -262,7 +262,7 @@ Portfolio and Home Page
 <!-- Consumption expenditure in Denmark and Sweden between 2019-08 and 2021-08 -->
 <div class="chart-hw-8" id="chartDenSweConsump">
   <script>
-    var consDenSwe = "charts/chart_denmark_sweden_consumption.json";
+    var consDenSwe = "charts/portfolio_charts/chart_denmark_sweden_consumption.json";
     vegaEmbed('#chartDenSweConsump', consDenSwe);
   </script>
 </div>
@@ -285,7 +285,7 @@ Portfolio and Home Page
 <container class="bcontainer">
   
 <div class='image-wk9-container'>
-<img src='charts/EXPO_LOLC_chart.png' class='image-wk9'>
+<img src='charts/portfolio_charts/EXPO_LOLC_chart.png' class='image-wk9'>
 </div>
 
 </container>
@@ -302,14 +302,14 @@ Portfolio and Home Page
   
   <div class="chart-interactive" id="chartf1interactive1">
     <script>
-      var f1_interactive_1 = "charts/f1-interactive1.json";
+      var f1_interactive_1 = "charts/portfolio_charts/f1-interactive1.json";
       vegaEmbed('#chartf1interactive1', f1_interactive_1);
     </script>
   </div>
 
   <div class="chart-interactive" id="chartf1interactive2">
     <script>
-      var f1_interactive_2 = "charts/f1-interactive2.json";
+      var f1_interactive_2 = "charts/portfolio_charts/f1-interactive2.json";
       vegaEmbed('#chartf1interactive2', f1_interactive_2);
     </script>
   </div>

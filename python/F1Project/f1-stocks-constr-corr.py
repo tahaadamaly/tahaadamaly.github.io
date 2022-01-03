@@ -1,3 +1,7 @@
+# This is used to access the stock data for mercedes and williams, as well as the constructor standings each year and create an
+# CSV file that can be used in a vega chart
+# Chart 5a and 5b
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

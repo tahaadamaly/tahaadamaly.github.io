@@ -47,13 +47,6 @@ body {
   text-align: center;
 }
 
-.bodyTextProject {
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-size: 21px;
-  font-weight: lighter;
-}
-
 .pagecontainer {
   display: grid;
 
@@ -112,19 +105,6 @@ h2 {
   border-radius: 25px;
 }
 
-.bcontainer-project {
-  display: flex;
-  flex-direction: row;
-  justify-items: center;
-  gap: 30px 30px;
-  margin-top: 30px;
-  border-style: solid;
-  border-color: white;
-  padding: 30px;
-  border-radius: 25px;
-  flex-wrap: wrap;
-}
-
 .chart {
   background-color: white;
   border-style: solid;
@@ -161,7 +141,6 @@ h2 {
 }
 
 .chart:hover, #chart1:hover {
-  /*border-color: rgb(224, 70, 8);*/
   border-color: rgb(19, 117, 197);
   border-radius: 5px;
   flex-grow: 1;
@@ -246,6 +225,43 @@ footer {
 }
 
 
+/* -------------------------------------- PROJECT PAGE --------------------------------------------*/
+
+.project-page-text {
+  color: white;
+  margin-bottom: -22px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 21px;
+  font-weight: lighter;
+  text-align: justify;
+}
+
+.bcontainer-project {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  gap: 30px 30px;
+  margin-top: 30px;
+  border-style: solid;
+  border-color: white;
+  padding: 30px;
+  border-radius: 25px;
+  flex-wrap: wrap;
+}
+
+.chart-project-section1 {
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+  transition: border-radius 400ms, flex-grow 1000ms;
+  width: 100%;
+  min-width: 350px;
+  
+}
 
 /* --------------------------------------EXTRAS--------------------------------------------*/
 
