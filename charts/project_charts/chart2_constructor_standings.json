@@ -1,0 +1,62 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  
+    "title": {
+      "text": "Formula 1 Constructor Points",
+      "subtitle": "2012-2021, Select a legend item to focus",
+      "subtitleFontStyle":"italic",
+      
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "description": "F1 Constructor Points",
+    "data": {
+      "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/chart2-constructor-standings-2012-2021.csv",
+      "format": {"type": "csv"}
+    },
+    "height": 300,
+    "width": "container",
+    "config": {"background": "#FfFfFf"},
+    "mark": {"type": "line", "point": true, "size": 2.5},
+    "selection": {
+      "Constructor": {"type": "multi", "fields": ["name"], "bind": "legend"},
+      "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true},
+      "grid": {"type": "interval", "bind": "scales"}
+    },
+    
+    "encoding": {
+      "x": {
+        "field": "year",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid": false, "format": ""},
+        "scale": {"domain": [2012, 2021]}
+      },
+      "y": {
+        "field": "points",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid": false},
+      "scale": {"domain": [0, 800]}
+      },
+      "color": {
+        "field": "name",
+        "type": "nominal",
+        "scale": {"scheme": "accent"},
+        "title": null,
+        "legend": {"orient": "bottom", "columns": 2, "fillColor": "#FfFfFf"}
+      },
+      "opacity": {"condition": {"selection": "Constructor", "value": 1}, "value": 0.05},
+      "tooltip": [
+        {"field": "name", "type": "nominal", "title": "Constructor"},
+        {"field": "points", "type": "quantitative", "title": "Total Points"},
+        {
+          "field": "year",
+          "type": "nominal",
+          "title": "Year"
+        }
+      ]
+    }
+  }

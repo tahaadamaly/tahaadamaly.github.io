@@ -107,14 +107,27 @@ This data was manually entered into an excel sheet and converted into a CSV file
 <p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 2: </span>Historical constructor standings</p>
 <br>
 <p class="project-page-text">
-This section presents the other side of our question. How well do each of the 9 teams selected perform each year? This data was obtained from the Ergast Formula 1 API which was accessed through python.
+This section presents the other side of our question. How well do each of the 9 teams selected perform each year? This data was obtained from the Ergast Formula 1 API which was accessed through python using <a target=”_blank” style="color: rgb(19, 117, 197);" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/python/F1Project/chart-2-constructor-standings.ipynb">this script</a>.
 This shows that the teams at the top end with large budgets, such as Mercedes, Red Bull and Ferrari generally perform better than the midfield teams.
 
 </p>
 <br>
 <container class="bcontainer-project">
 
-
+  <div class="chart-project-section1" id="f1constrstandings">
+    <script>
+      var constr_standings = "charts/project_charts/chart2_constructor_standings.json";
+      vegaEmbed('#f1constrstandings', constr_standings);
+    </script>
+  </div>
+  <p class="project-page-text">
+    This section of the data is extremely reliable, and replicable. The python script linked above accesses the Ergast F1 API and simply needs to be rerun once a year
+    To update the points of each team. When running this script again, the year needs to be changed to the current year. The data obtained from this API was heavily nested and so 
+    python was used to access it, instead of directly accessing it in Vegalite. The data was also cleaned to only keep the 9 teams being analysed. It must also be noted that 3 of the teams (Alfa Romeo, Aston Martin, Alpine)
+    have either changed names or changed owners in the last 10 years, and so the points scored by the previous team / team name are presented.
+    However, the R&D values obtained in section 1 are obtained for the previous teams/team names as well but are labeled as the current team name 
+    so this does not significantly affect the further analysis conducted below.
+  </p>
 
 
 
