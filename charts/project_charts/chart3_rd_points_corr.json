@@ -1,5 +1,14 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Formula 1 R&D Expenditure and Constructor Standings",
+      "subtitle": "2012-2020",
+      "subtitleFontStyle":"italic",
+      
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
     "data": {
       "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/f1-rd-constructor-standings.csv",
       "format":{"type": "csv"}

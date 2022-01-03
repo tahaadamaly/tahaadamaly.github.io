@@ -22,8 +22,7 @@
   "mark": {"type": "area", "point": false, "size": 50},
   "selection": {
     "Driver": {"type": "multi", "fields": ["driver"], "bind": "legend"},
-    "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true},
-    "grid": {"type": "interval", "bind": "scales"}
+    "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true}
   },
   
   "encoding": {
@@ -32,7 +31,7 @@
       "type": "quantitative",
       "title": null,
       "axis": {"grid": false},
-      "scale": {"domain": [1, 21]}
+      "scale": {"domain": [0, 21]}
     },
     "y": {
       "field": "points",

@@ -22,8 +22,7 @@
     "mark": {"type": "line", "point": true, "size": 2.5},
     "selection": {
       "Constructor": {"type": "multi", "fields": ["name"], "bind": "legend"},
-      "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true},
-      "grid": {"type": "interval", "bind": "scales"}
+      "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true}
     },
     
     "encoding": {
