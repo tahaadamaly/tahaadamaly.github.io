@@ -1,0 +1,86 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/f1-rd-constructor-standings.csv",
+      "format":{"type": "csv"}
+    },
+    "width": "container",
+    "height": 310,
+    "layer": [
+      {
+        "mark": {
+          "type": "point",
+          "filled": false,
+          "size": 80
+        },
+        "encoding": {
+          "x": {
+            "field": "rd_exp",
+            "type": "quantitative",
+            "title": "R&D Expenditure (US$, millions)",
+            "scale": {"domain": [100, 500]}
+          },
+          "y": {
+            "field": "points",
+            "type": "quantitative",
+            "title": "Constructor Points (Season end)"
+          },
+            "color": {
+              "field": "constructorID",
+              "type": "nominal",
+              "legend": null,
+              "scale": {"scheme": "inferno"}
+          },
+             "tooltip": [
+              {"field": "constructorID", "type": "nominal", "title": "Constructor"},
+              {"field": "points", "type": "quantitative", "title": "Total Points"},
+              {"field": "rd_exp", "type": "quantitative", "title": "R&D Expenditure"}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "line",
+          "color": "seagreen"
+        },
+        "transform": [
+          {
+            "regression": "points",
+            "on": "rd_exp"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "rd_exp",
+            "type": "quantitative"
+          },
+          "y": {
+            "field": "points",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "transform": [
+          {
+            "regression": "points",
+            "on": "rd_exp",
+            "params": true
+          },
+          {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+        ],
+        "mark": {
+          "type": "text",
+          "size": 14,
+          "color": "seagreen",
+          "x": "width",
+          "align": "right",
+          "y": -5
+        },
+        "encoding": {
+          "text": {"type": "nominal", "field": "R2"}
+        }
+      }
+    ]
+  }
+  
