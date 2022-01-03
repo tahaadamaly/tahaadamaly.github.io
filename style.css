@@ -101,6 +101,7 @@ h2 {
   margin-top: 30px;
   border-style: solid;
   border-color: white;
+
   padding: 30px;
   border-radius: 25px;
 }
@@ -233,10 +234,23 @@ footer {
   font-family: 'Poppins', sans-serif;
   font-size: 21px;
   font-weight: lighter;
-  text-align: justify;
+  text-align: none;
 }
 
 .bcontainer-project {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 30px 30px;
+  margin-top: 30px;
+  border-style: solid;
+  border-color: white;
+  padding: 30px;
+  border-radius: 25px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.bcontainer-project-section5 {
   display: flex;
   flex-direction: row;
   justify-items: center;
@@ -258,7 +272,20 @@ footer {
   text-align: center;
   padding: 20px;
   transition: border-radius 400ms, flex-grow 1000ms;
-  width: 100%;
+  width: 75%;
+  min-width: 350px;
+}
+
+.chart-project-section5 {
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+  transition: border-radius 400ms, flex-grow 1000ms;
+  width: 47%;
   min-width: 350px;
   
 }
@@ -398,6 +425,16 @@ footer {
     border-color: rgb(224, 70, 8);
   }
   .bcontainer {
+    border-style: none;
+    padding: 1px;
+    gap: 10px 10px
+  }
+  .bcontainer-project {
+    border-style: none;
+    padding: 1px;
+    gap: 10px 10px
+  }
+  .bcontainer-project-section5 {
     border-style: none;
     padding: 1px;
     gap: 10px 10px

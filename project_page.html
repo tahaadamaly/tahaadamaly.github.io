@@ -69,7 +69,7 @@ as this means that predictions can be made for the outcomes of constructors cham
 R&D expenditure which affects race outcomes, so this project will simply build on this one area and will not consider factors that are difficult to quantify, such as driver skill.
 </p><br><br>
 
-
+<hr size="5" width="100%" color="white" style="margin-top: 75px;">
 <!-- /////////////////// SECTION 1 //////////////////////////////////// -->
 <p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 1: </span>Yearly R&D Expenditure by Constructor</p><br>
 <p class="project-page-text">
@@ -100,9 +100,9 @@ This data was manually entered into an excel sheet and converted into a CSV file
 </container>
 <br>
 
-<!-- ///////////////////  END CONTAINER WITH FIRST CHART //////////////////////////////////// -->
+<!-- /////////////////// END SECTION 1 //////////////////////////////////// -->
 
-
+<hr size="5" width="100%" color="white" style="margin-top: 75px;">
 <!-- /////////////////// SECTION 2 //////////////////////////////////// -->
 <p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 2: </span>Historical constructor standings</p>
 <br>
@@ -129,9 +129,10 @@ This shows that the teams at the top end with large budgets, such as Mercedes, R
     so this does not significantly affect the further analysis conducted below.
   </p>
 </container>
+<br>
+<!-- /////////////////// END SECTION 2 //////////////////////////////////// -->
 
-
-
+<hr size="5" width="100%" color="white" style="margin-top: 75px;">
 <!-- /////////////////// SECTION 3 //////////////////////////////////// -->
 <p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 3: </span>Relationship between R&D and points scored</p>
 <br>
@@ -151,7 +152,99 @@ This section combines the data we have gathered so far to test the relationship 
 text
   </p>
 </container>
+<br>
+<!-- /////////////////// END SECTION 3 //////////////////////////////////// -->
 
+
+<hr size="5" width="100%" color="white" style="margin-top: 75px;">
+<!-- /////////////////// SECTION 4 //////////////////////////////////// -->
+<p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 4: </span>Stock prices as a proxy for R&D expenditure</p>
+<br>
+<p class="project-page-text">
+This section introduces stock prices as a proxy for R&D expenditure. Given that the data collected above may be slightly unreliable, 
+This section presents the stock prices for Mercedes (through its holding company, Daimler AG) as well as Williams F1. The stock prices may be somewhat indicative of
+the value of the company and therefore the amount they can invest in R&D.
+<br>  </p>
+<container class="bcontainer-project">
+
+<!--
+  <div class="chart-project-section1" id="f1rdpointscorr">
+    <script>
+      var rd_points_corr = "charts/project_charts/chart3_rd_points_corr.json";
+      vegaEmbed('#f1rdpointscorr', rd_points_corr);
+    </script>
+  </div>
+-->
+
+  <p class="project-page-text">
+  These two teams are the only ones 
+  with clear listed parent companies and with data going back to 2012. Since points scored are measured on a yearly basis, the data presented is the average stock price 
+  each year between 2012 and 2020. The data was collected using the yfinance python module (which accesses the yahoo finance API).
+  The data collected was then averaged for each year using python and then exported into a CSV which was used in a vegalite specification
+  the python script can be accessed <a>here</a>. 
+    </p>
+
+</container>
+<!-- /////////////////// END SECTION 4 //////////////////////////////////// -->
+
+
+<hr size="5" width="100%" color="white" style="margin-top: 75px;">
+<!-- /////////////////// SECTION 5 //////////////////////////////////// -->
+<p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 5: </span>Relationship between stock prices and points</p>
+<br>
+<p class="project-page-text">
+Following Section 4, these charts look at the relationship between the stock price of each of the two teams selected and the points they score in each season
+</p>
+<br>
+<container class="bcontainer-project-section5">
+
+
+  <div class="chart-project-section5" id="f1stockpointscorr1">
+    <script>
+      var stock_points_corr_1 = "charts/project_charts/chart5a_mercedes_stock_corr.json";
+      vegaEmbed('#f1stockpointscorr1', stock_points_corr_1);
+    </script>
+  </div>
+  <div class="chart-project-section5" id="f1stockpointscorr2">
+    <script>
+      var stock_points_corr_2 = "charts/project_charts/chart5b_williams_stock_corr.json";
+      vegaEmbed('#f1stockpointscorr2', stock_points_corr_2);
+    </script>
+  </div>
+
+  <p class="project-page-text">
+texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+  </p>
+</container>
+<!-- /////////////////// END SECTION 5 //////////////////////////////////// -->
+
+
+<hr size="5" width="100%" color="white" style="margin-top: 75px;">
+<!-- /////////////////// SECTION 6 //////////////////////////////////// -->
+<p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 6: </span>Qualifying position and race outcome</p>
+<br>
+<p class="project-page-text">
+Finally, a small deviation from the theme of the previous sections. Here we can see the relationship between the qualifying position that a driver attains on the 
+day before the race, and the final race outcome. There is a positive correlation here which has interesting implications for race predictions and stimulates further work to combine factors such as R&D, 
+qualifying position and more datapoints to build a model that can predict with a high level of accuracy the outcomes of a formula 1 season.
+<br>  </p>
+<container class="bcontainer-project">
+
+
+  <div class="chart-project-section1" id="f1qualiracecorr">
+    <script>
+      var quali_race_corr = "charts/project_charts/chart6b_quali_race_corr.json";
+      vegaEmbed('#f1qualiracecorr', quali_race_corr);
+    </script>
+  </div>
+
+
+  <p class="project-page-text">
+  texttexttexttexttexttexttexttext
+    </p>
+
+</container>
+<!-- /////////////////// END SECTION 6 //////////////////////////////////// -->
 
 <!-- ///////////////////  FOOTER //////////////////////////////////// -->
 
