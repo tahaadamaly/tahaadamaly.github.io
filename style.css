@@ -86,6 +86,14 @@ h2 {
   font-weight: lighter;
 }
 
+h3 {
+  color: rgb(255, 40, 0);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
 /* -----------------------------------END CONTENT IN HEADER-------------------------------------------*/
 
 
