@@ -9,9 +9,9 @@ from scipy import stats
 
 # Obtaining constructor standings, data was obtained in chart-2-constructor-standings.py through Ergast F1 API
 # This same data was presented in Section 2, however it is cleaned here and only years 2012-2020 are considered.
-constructor_standings = pd.read_csv('data/chart2-constructor-standings-2012-2021.csv')
-constructor_standings = constructor_standings[constructor_standings.year != 2021]
-constructor_standings = constructor_standings[['name', 'points', 'constructorID', 'year']]
+constructor_standings = pd.read_csv('data/constructor-standings-2012-2021-proportions.csv')
+#constructor_standings = constructor_standings[constructor_standings.year != 2021]
+constructor_standings = constructor_standings[['name', 'proptotalpoints', 'constructorID', 'year']]
 constructor_standings.sort_values(by=['constructorID', 'year'], inplace=True)
 constructor_standings.reset_index(drop=True, inplace=True)
 
@@ -26,9 +26,11 @@ master = pd.DataFrame()
 master['constructorID'] = constructor_standings['constructorID']
 master['year'] = constructor_standings['year']
 master['rd_exp'] = rd_exp['expenditure']
-master['points'] = constructor_standings['points']
+master['proptotalpoints'] = constructor_standings['proptotalpoints']
 
-master.to_csv('data/f1-rd-constructor-standings.csv')
+master.to_csv('data/f1-rd-constructor-standings2.csv')
+
+print(master[master.year == 2014])
 """
 x = master['rd_exp'].astype(int)
 y = master['points'].astype(int)
