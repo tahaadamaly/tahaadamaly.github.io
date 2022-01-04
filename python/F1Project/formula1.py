@@ -1,3 +1,7 @@
+# This script is from pyErgast, a module that was created to access the Ergast F1 API and was not written by me. 
+# I use this script in some cases to access the Ergast API given the multiple levels of nesting in the API and difficulty accessing it
+
+
 import requests
 import pandas as pd
 
