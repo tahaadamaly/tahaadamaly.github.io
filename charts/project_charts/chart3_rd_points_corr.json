@@ -1,95 +1,95 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "Formula 1 R&D Expenditure and Constructor Standings",
-      "subtitle": "2012-2020",
-      "subtitleFontStyle":"italic",
-      
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
-    },
-    "data": {
-      "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/f1-rd-constructor-standings.csv",
-      "format":{"type": "csv"}
-    },
-    "width": "container",
-    "height": 310,
-    "layer": [
-      {
-        "mark": {
-          "type": "point",
-          "filled": false,
-          "size": 80
-        },
-        "encoding": {
-          "x": {
-            "field": "rd_exp",
-            "type": "quantitative",
-            "title": "R&D Expenditure (US$, millions)",
-            "scale": {"domain": [100, 500]}
-          },
-          "y": {
-            "field": "points",
-            "type": "quantitative",
-            "title": "Constructor Points (Season end)"
-          },
-            "color": {
-              "field": "constructorID",
-              "type": "nominal",
-              "legend": null,
-              "scale": {"scheme": "inferno"}
-          },
-             "tooltip": [
-              {"field": "constructorID", "type": "nominal", "title": "Constructor"},
-              {"field": "points", "type": "quantitative", "title": "Total Points"},
-              {"field": "rd_exp", "type": "quantitative", "title": "R&D Expenditure"}
-          ]
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Formula 1 R&D Expenditure and Constructor Standings",
+    "subtitle": "2012-2020",
+    "subtitleFontStyle":"italic",
+    
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/f1-rd-constructor-standings.csv",
+    "format":{"type": "csv"}
+  },
+  "width": "container",
+  "height": 310,
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": false,
+        "size": 80
       },
-      {
-        "mark": {
-          "type": "line",
-          "color": "seagreen"
+      "encoding": {
+        "x": {
+          "field": "rd_exp",
+          "type": "quantitative",
+          "title": "R&D Expenditure (US$, millions)",
+          "scale": {"domain": [100, 500]}
         },
-        "transform": [
-          {
-            "regression": "points",
-            "on": "rd_exp"
-          }
-        ],
-        "encoding": {
-          "x": {
-            "field": "rd_exp",
-            "type": "quantitative"
-          },
-          "y": {
-            "field": "points",
-            "type": "quantitative"
-          }
-        }
+        "y": {
+          "field": "proptotalpoints",
+          "type": "quantitative",
+          "title": "Constructor Points (Proportion of total scored by all teams)"
+        },
+          "color": {
+            "field": "constructorID",
+            "type": "nominal",
+            "legend": null,
+            "scale": {"scheme": "inferno"}
+        },
+           "tooltip": [
+            {"field": "constructorID", "type": "nominal", "title": "Constructor"},
+            {"field": "year", "type": "quantitative", "title": "Year"},
+            {"field": "proptotalpoints", "type": "quantitative", "title": "Prop. of Points", "format": ".2f"},
+            {"field": "rd_exp", "type": "quantitative", "title": "R&D Expenditure"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "seagreen"
       },
-      {
-        "transform": [
-          {
-            "regression": "points",
-            "on": "rd_exp",
-            "params": true
-          },
-          {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
-        ],
-        "mark": {
-          "type": "text",
-          "size": 14,
-          "color": "seagreen",
-          "x": "width",
-          "align": "right",
-          "y": -5
+      "transform": [
+        {
+          "regression": "proptotalpoints",
+          "on": "rd_exp"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "rd_exp",
+          "type": "quantitative"
         },
-        "encoding": {
-          "text": {"type": "nominal", "field": "R2"}
+        "y": {
+          "field": "proptotalpoints",
+          "type": "quantitative"
         }
       }
-    ]
-  }
-  
+    },
+    {
+      "transform": [
+        {
+          "regression": "proptotalpoints",
+          "on": "rd_exp",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "size": 14,
+        "color": "seagreen",
+        "x": "width",
+        "align": "right",
+        "y": -5
+      },
+      "encoding": {
+        "text": {"type": "nominal", "field": "R2"}
+      }
+    }
+  ]
+}
