@@ -88,7 +88,9 @@ h2 {
 
 h3 {
   color: rgb(255, 40, 0);
-  font-size: 30px;
+  color: rgb(19, 143, 242);
+  font-size: 45px;
+  text-decoration: underline;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   text-align: center;
