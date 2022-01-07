@@ -37,7 +37,7 @@ Project Page
 <container class="hcontainer">
 
 <header>
-<h1>Data Science</h1>
+<h1>DataScience</h1>
 <h2>ECON30006: Taha Adamaly</h2>
 </header>
 
@@ -61,13 +61,9 @@ Project Page
 
 
 <!-- /////////////////// INTRO TEXT //////////////////////////////////// -->
-<h3>Formula 1 - The Impact of R&D</h3>
-<p class="project-page-text"><span style="font-weight: 700;">The Money Factor - </span> 
-Does R&D expenditure explain the drastic difference in performance between teams in Formula 1?<br>
-This project aims to analyse the expenditure that constructors (teams) in Formula 1 spend on research and development, 
-and how this translates to improved performance in races, measured by total points scored by teams in a season. This data has interesting implications, especially if the R&D data is available before the race season is completed,
-as this means that predictions can be made for the outcomes of constructors championships at the end of the year. However, there are a number of complex factors at play in addition to 
-R&D expenditure which affects race outcomes, so this project will simply build on this one area and will not consider factors that are difficult to quantify, such as driver skill.
+<h3>Formula 1: <span style="font-weight: 500; color: white;">The Impact of R&D</span></h3>
+<p class="project-page-text">
+In the 2021 Formula 1 season, the winning constructor (team), Mercedes, scored 613.5 points, which is 28% of the total points scored by all teams, whereas the bottom two teams scored 0.6% and 0% of the points respectively. Formula 1 is an immensely expensive sport and the amount of money that constructors have available to develop their cars likely has a significant impact on the performance of their cars during races. This project aims to evaluate the impact R&D expenditure has on this drastic difference in performance across teams.
 </p>
 
 
@@ -75,17 +71,8 @@ R&D expenditure which affects race outcomes, so this project will simply build o
 
 <!-- /////////////////// SECTION 1 //////////////////////////////////// -->
 <hr size="5" width="100%" color="white" style="margin-top: 75px;">
-<p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 1: </span>Yearly R&D Expenditure by Constructor</p><br>
-<p class="project-page-text">
-This section presents the R&D expenditure for 9 of the teams in Formula 1 between 2012 and 2020. Individual teams R&D expenditure can be seen by selecting from the dropdown list below the chart.
-The data presented here was obtained from different sources for each year, including article posts on motorsports journalism websites. The full source list can be found <a href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/data/rd_source_list.csv" target="_blank" style="color: rgb(19, 117, 197);">here</a>.
-There were some issues with data collection for this section. Most of the teams in Formula 1 do not publicly disclose their expenditure on R&D and so the data presented is obtained by estimates from past expenditure, 
-as well as data that is derived from the financial statements of the holding companies of some of the teams.
-</p>
-<br>
+<p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 1: </span>Yearly R&D Expenditure by Constructor</p>
 <container class="bcontainer-project">
-
-
 <div class="chart-project-section1" id="f1rdexp">
   <script>
     var rd_exp = "charts/project_charts/chart1_rd_data_interactive.json";
@@ -94,12 +81,7 @@ as well as data that is derived from the financial statements of the holding com
 </div>
 
 <p class="project-page-text">
-As can be seen on first chart, R&D expenditure varies per team, with some of the top teams spending many multiples of what smaller teams spend. 
-However, expenditure across time for teams remains relatively consistent. The data collected here presents many challenges, the main one being replicability and reliability.
-Each year, different online articles on different sites come up with estimated expenditures for teams, there is no one source of consistent and reliable information available. 
-Therefore, this section must be manually updated. This is not a significant issue given the frequency of data, as the data only needs to be updated once a year.
-This data was manually entered into an excel sheet and converted into a CSV file, which was then entered into a vega-lite specification.
-
+  The data used here was accessed from a variety of sources, a full source list can be found <a target="_blank" style="color: rgb(19, 143, 242);" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/data/rd_source_list.csv";>here</a> and mainly includes motorsports blogs. The data was manually entered into an excel file and imported into Python for analysis. Given the variety of sources used and inconsistency in site design across sources, a web scraper or API could not be used here. This posed the first challenge. The data used here are estimates as R&D data is not public. It is also not very replicable as new sites pop up every year with estimates for expenditure. However, given the frequency of data (1-year intervals) this is not a significant issue as rapid updates are not crucial.
 </p>
 </container>
 <br>
@@ -111,13 +93,6 @@ This data was manually entered into an excel sheet and converted into a CSV file
 <!-- /////////////////// SECTION 2 //////////////////////////////////// -->
 <hr size="5" width="100%" color="white" style="margin-top: 75px;">
 <p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 2: </span>Historical constructor standings</p>
-<br>
-<p class="project-page-text">
-This section presents the other side of our question. How well do each of the 9 teams selected perform each year? This data was obtained from the Ergast Formula 1 API which was accessed through python using <a target=”_blank” style="color: rgb(19, 117, 197);" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/python/F1Project/chart-2-constructor-standings.ipynb">this script</a>.
-This shows that the teams at the top end with large budgets, such as Mercedes, Red Bull and Ferrari generally perform better than the midfield teams.
-
-</p>
-<br>
 <container class="bcontainer-project">
 
   <div class="chart-project-section1" id="f1constrstandings">
@@ -127,12 +102,7 @@ This shows that the teams at the top end with large budgets, such as Mercedes, R
     </script>
   </div>
   <p class="project-page-text">
-    This section of the data is extremely reliable, and replicable. The python script linked above accesses the Ergast F1 API and simply needs to be rerun once a year
-    To update the points of each team. When running this script again, the year needs to be changed to the current year. The data obtained from this API was heavily nested and so 
-    python was used to access it, instead of directly accessing it in Vegalite. The data was also cleaned to only keep the 9 teams being analysed. It must also be noted that 3 of the teams (Alfa Romeo, Aston Martin, Alpine)
-    have either changed names or changed owners in the last 10 years, and so the points scored by the previous team / team name are presented.
-    However, the R&D values obtained in section 1 are obtained for the previous teams/team names as well but are labeled as the current team name 
-    so this does not significantly affect the further analysis conducted below.
+    This section presents the points scored by constructors between 2012 and 2021. The data was accessed from the Ergast F1 API through Python using <a target="_blank" style="color: rgb(19, 143, 242);" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/python/F1Project/chart-2-constructor-standings.ipynb">this</a> script. Given the complexity of the API and multiple levels of nesting, it could not be directly accessed in Vega and Python had to be used. A module called pyErgast was designed for this purpose and heavily inspired the code used to obtain the data for this graph. The data in this section is automated and easily replicable as the same Python script can be run once a year to update the data when a season ends.
   </p>
 </container>
 <br>
@@ -143,11 +113,7 @@ This shows that the teams at the top end with large budgets, such as Mercedes, R
 <!-- /////////////////// SECTION 3 //////////////////////////////////// -->
 <hr size="5" width="100%" color="white" style="margin-top: 75px;">
 <p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 3: </span>Relationship between R&D and points scored</p>
-<br>
-<p class="project-page-text">
-This section combines the data we have gathered so far to test the relationship between the two variables of interest. 
-</p>
-<br>
+
 <container class="bcontainer-project">
 
   <div class="chart-project-section1" id="f1rdpointscorr">
@@ -157,10 +123,7 @@ This section combines the data we have gathered so far to test the relationship 
     </script>
   </div>
   <p class="project-page-text">
-For this regression, the points data presented above was modified to allow for comparison across years. To do this, I used python to add up the total points scored by all teams in a given season, and calculated
-the proportion of this total that each individual team scored. This python file can be accessed <a target= "_blank" style="color: rgb(19, 117, 197);" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/python/F1Project/chart-2-constructor-standings.ipynb">here</a>. 
-I then ran a regression of the proportion of points scored on R&D expenditure to obtain this chart. This chart shows an interesting relationship as there is a clear positive correlation between the amount of expenditure on R&D and the proportion of points scored by the team.
-This relationship was expected, and the accuracy and validity of the regression could be improved by using better data sources for R&D, which are unlikely to be public information.
+    The data used here is the same as in Section 1 and 2. This presents the relationship between R&D expenditure and points scored. Each year, the number of races can vary, changing the maximum number of points available. To control for this, the variable used is the proportion of total points scored by each team. This was calculated in Python using <a target="_blank" style="color: rgb(19, 143, 242);" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/python/F1Project/chart-2-constructor-standings.ipynb">this</a> script. This shows a clear positive correlation.
   </p>
 </container>
 <br>
@@ -174,16 +137,7 @@ This relationship was expected, and the accuracy and validity of the regression 
 <!-- /////////////////// SECTION 4 //////////////////////////////////// -->
 <hr size="5" width="100%" color="white" style="margin-top: 75px;">
 <p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 4: </span>Relationship between stock prices and points</p>
-<br>
-<p class="project-page-text">
-  This section introduces stock prices as a proxy for R&D expenditure. Given that the data collected above may be slightly unreliable, 
-  This section presents the relationship between both stock prices for Mercedes and Williams F1 and their respective performances in each season (measured by total points scored). The stock prices may be somewhat indicative of
-  the value of the company and their access to finance and therefore the amount they can invest in R&D.
-</p>
-<br>
 <container class="bcontainer-project-section5">
-
-
   <div class="chart-project-section5" id="f1stockpointscorr1">
     <script>
       var stock_points_corr_1 = "charts/project_charts/chart5a_mercedes_stock_corr.json";
@@ -198,12 +152,7 @@ This relationship was expected, and the accuracy and validity of the regression 
   </div>
 
   <p class="project-page-text">
-    These two teams are the only ones 
-    with clear listed parent companies and with data going back to 2012. Since points scored are measured on a yearly basis, the data presented is the average stock price 
-    each year between 2012 and 2020. The data was collected using the yfinance python module (which accesses the yahoo finance API).
-    The data collected was then averaged for each year using python and then exported into a CSV which was used in a vegalite specification.
-    The python script can be accessed <a target= "_blank" style="color: rgb(19, 117, 197);" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/python/F1Project/f1-stock-price.ipynb">here</a>. 
-    This data shows that, for Mercedes, there is some correlation between their stock price and their performance, but for Williams this correlation is nonexistent.
+    This presents a proxy for R&D expenditure, stock prices. The data was obtained using the yfinance Python module which accesses the yahoo finance API using <a target="_blank" style="color: rgb(19, 143, 242)" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/python/F1Project/f1-stock-price.ipynb">this</a> script. Only Mercedes and Williams have clear public parent companies and data going back to 2012, so they were the only teams selected. This was used as a proxy as the stock price of a team can be indicative of the value of the company and therefore the amount of funds available for investment in R&D. This shows that there is a clear correlation between stock prices and race points for Mercedes, but not for Williams. 
   </p>
 </container>
 <!-- /////////////////// END SECTION 4 //////////////////////////////////// -->
@@ -215,29 +164,36 @@ This relationship was expected, and the accuracy and validity of the regression 
 <!-- /////////////////// SECTION 5 //////////////////////////////////// -->
 <hr size="5" width="100%" color="white" style="margin-top: 75px;">
 <p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Section 5: </span>Qualifying position and race outcome</p>
-<br>
-<p class="project-page-text">
-Finally, a small deviation from the theme of the previous sections. Here we can see the relationship between the qualifying position that a driver attains on the 
-day before the race, and the final race outcome. There is a positive correlation here which has interesting implications for race predictions and stimulates further work to combine factors such as R&D, 
-qualifying position and more datapoints to build a model that can predict with a high level of accuracy the outcomes of a formula 1 season.
-<br>  </p>
 <container class="bcontainer-project">
-
-
   <div class="chart-project-section1" id="f1qualiracecorr">
     <script>
       var quali_race_corr = "charts/project_charts/chart6_quali_race_corr.json";
       vegaEmbed('#f1qualiracecorr', quali_race_corr);
     </script>
   </div>
-
-
   <p class="project-page-text">
-  texttexttexttexttexttexttexttext
+    Finally, a small deviation. Given the complexity of predicting outcomes in Formula 1 races, this is a variable that I believe will strongly influence any models to predict race outcomes – Qualifying position. The day before a race each driver completes a lap, and the lap times determine the race start position. This shows the qualifying position and final race finishing position of drivers for every race going back to 1996 and has 7625 datapoints. The data was once again accessed using the Ergast F1 API using <a target="_blank" style="color: rgb(19, 143, 242)" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/python/F1Project/qualiracecorr.ipynb">this</a> python script. A heatmap was used because of the number of datapoints and recurring values. This shows a clear positive correlation between qualifying position and final race outcome (showed by a higher number of records on the diagonal). 
     </p>
 
 </container>
 <!-- /////////////////// END SECTION 5 //////////////////////////////////// -->
+
+
+
+<!-- /////////////////// CONCLUSION //////////////////////////////////// -->
+<hr size="5" width="100%" color="white" style="margin-top: 75px;">
+<p class="bodyText" style="font-size: 30px;"><span style="color: rgb(19, 143, 242); font-weight: 700;">Conclusion: </span>What does this tell us?</p>
+<br>
+
+<container class="bcontainer-project">
+  <p class="project-page-text">
+    At the start of this project, I aimed to analyse the possible correlation between R&D expenditure and constructor standings in Formula 1. This relationship was clearly shown and - unsurprisingly - the richer the team, the better they tend to perform. This is the reason why teams such as Mercedes, Red Bull and Ferrari with huge budgets are in a different league to the rest of the teams in races. In 2022, a budget cap is going to be set which will limit the amount that teams can spend on R&D, to level the playing field. This project has shown that such as budget cap will likely have a significant impact on the inequality in constructor performance. Further work can be done here to add more variables and build a stronger model to understand what drives constructors’ performance in Formula 1, such as driver skill (which is difficult to measure), history of the team (whether they have a rich history of car manufacturing, such as Mercedes, or not) and more.
+  <br><br><br>  
+  </p>
+
+</container>
+<!-- /////////////////// END CONCLUSION //////////////////////////////////// -->
+
 
 <!-- ///////////////////  FOOTER //////////////////////////////////// -->
 

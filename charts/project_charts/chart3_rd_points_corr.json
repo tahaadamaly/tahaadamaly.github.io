@@ -4,8 +4,8 @@
     "text": "Formula 1 R&D Expenditure and Constructor Standings",
     "subtitle": "2012-2020, Hover over points for detailed information",
     "subtitleFontStyle":"italic",
-    
-    "subtitleFontSize":10,
+    "fontSize": 20,
+    "subtitleFontSize":12,
     "anchor": "start",
     "color": "black"
   },

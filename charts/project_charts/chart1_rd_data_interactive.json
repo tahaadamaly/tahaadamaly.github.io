@@ -3,9 +3,10 @@
   
   "title": {
       "text": "Formula 1: Constructor R&D Expenditure",
+      "fontSize": 20,
       "subtitle":"Yearly estimated R&D expenditure by constructor",
       "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
+      "subtitleFontSize":12,
       "anchor": "start",
       "color": "black"
     },

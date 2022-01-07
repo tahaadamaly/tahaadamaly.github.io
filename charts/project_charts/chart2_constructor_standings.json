@@ -3,10 +3,10 @@
   
     "title": {
       "text": "Formula 1 Constructor Points",
+      "fontSize": 20,
       "subtitle": "2012-2021, Select a legend item to focus",
       "subtitleFontStyle":"italic",
-      
-      "subtitleFontSize":10,
+      "subtitleFontSize":12,
       "anchor": "start",
       "color": "black"
     },
