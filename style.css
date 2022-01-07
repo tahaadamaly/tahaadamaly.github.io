@@ -259,7 +259,7 @@ footer {
   flex-wrap: wrap;
   align-items: center;
 }
-.bcontainer-project-section5 {
+.bcontainer-project-section4 {
   display: flex;
   flex-direction: row;
   justify-items: center;
@@ -285,7 +285,7 @@ footer {
   min-width: 350px;
 }
 
-.chart-project-section5 {
+.chart-project-section4 {
   background-color: white;
   border-style: solid;
   border-color: white;
@@ -298,6 +298,10 @@ footer {
   min-width: 350px;
   
 }
+.chart-project-section1:hover, .chart-project-section4:hover {
+  border-color: rgb(17, 143, 242);
+}
+
 
 /* --------------------------------------EXTRAS--------------------------------------------*/
 
