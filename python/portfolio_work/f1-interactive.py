@@ -18,11 +18,11 @@ for i in range(1, 22):
 # Delete any drivers not in the top 10 as of round 21
 
 top_ten_drivers = ['max_verstappen', 'hamilton', 'bottas', 'perez', 'leclerc', 'norris', 'sainz', 'ricciardo', 'gasly', 'alonso']
-"""
+
 for x in master_data['driverID']:
     if x not in top_ten_drivers:
         master_data.drop(master_data.index[master_data['driverID'] == x], inplace=True)
-"""
+
 master_data = master_data[master_data['driverID'].isin(top_ten_drivers)]
 
 print(master_data.head(15))

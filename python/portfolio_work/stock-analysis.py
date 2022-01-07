@@ -9,17 +9,12 @@ from scipy.stats import linregress
 
 
 # Setting up dataframes with stock data and cleaning dataframes
+# Data downloaded from jbs.lk (requires login)
 expo = pd.read_csv('data/PriceData_EXPO_3Y.csv')
 expo = expo.drop(columns=['EX', 'PrevClose', 'Cha', 'Open', 'High', 'Low', 'Avg', 'Volume', 'Turnover', 'Trns', 'RSI', 'Return', 'DilutedPrice'])
 expo = expo.rename(columns={'Date': 'date', 'Security': 'name', 'Close': 'price'})
 for i in expo['name']:
     expo['name'] = 'EXPO'
-
-lolc = pd.read_csv('data/PriceData_LOLC_3Y.csv')
-lolc = lolc.drop(columns=['EX', 'PrevClose', 'Cha', 'Open', 'High', 'Low', 'Avg', 'Volume', 'Turnover', 'Trns', 'RSI', 'Return', 'DilutedPrice'])
-lolc = lolc.rename(columns={'Date': 'date', 'Security': 'name', 'Close': 'price'})
-for n in lolc['name']:
-    lolc['name'] = 'LOLC'
 
 aspi = pd.read_csv('data/IndexData_ASPI_3Y.csv')
 aspi = aspi.drop(columns=['Turnover', 'Volume', 'Trades', 'Chg', 'Chg.1', 'ForeignBuy', 'ForeignSell', 'BS', 'ForeignNet', 'MarketCap', 'PER', 'RSI'])
@@ -30,7 +25,6 @@ stock_data = pd.DataFrame()
 stock_data['date'] = expo['date']
 stock_data['expo'] = expo['price']
 stock_data['aspi'] = aspi['price']
-stock_data['lolc'] = lolc['price']
 
 y = stock_data['expo']
 x = stock_data['aspi']
