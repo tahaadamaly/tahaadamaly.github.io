@@ -16,18 +16,19 @@ expo = expo.rename(columns={'Date': 'date', 'Security': 'name', 'Close': 'price'
 for i in expo['name']:
     expo['name'] = 'EXPO'
 
-aspi = pd.read_csv('data/IndexData_ASPI_3Y.csv')
-aspi = aspi.drop(columns=['Turnover', 'Volume', 'Trades', 'Chg', 'Chg.1', 'ForeignBuy', 'ForeignSell', 'BS', 'ForeignNet', 'MarketCap', 'PER', 'RSI'])
-aspi = aspi.rename(columns={'Date': 'date', 'Sector': 'name', 'Index': 'price'})
-
+lolc = pd.read_csv('data/PriceData_LOLC_3Y.csv')
+lolc = lolc.drop(columns=['EX', 'PrevClose', 'Cha', 'Open', 'High', 'Low', 'Avg', 'Volume', 'Turnover', 'Trns', 'RSI', 'Return', 'DilutedPrice'])
+lolc = lolc.rename(columns={'Date': 'date', 'Security': 'name', 'Close': 'price'})
+for i in lolc['name']:
+    lolc['name'] = 'LOLC'
 stock_data = pd.DataFrame()
 
 stock_data['date'] = expo['date']
 stock_data['expo'] = expo['price']
-stock_data['aspi'] = aspi['price']
+stock_data['lolc'] = lolc['price']
 
 y = stock_data['expo']
-x = stock_data['aspi']
+x = stock_data['lolc']
 
 # Polynomial model with 3 features
 poly_model = make_pipeline(PolynomialFeatures(1), LinearRegression())
@@ -47,7 +48,7 @@ r_squared="{:.2f}".format(r_value**2)
 
 # Formatting
 plt.legend(('Best fit', 'R-squared={}'.format(r_squared)), fontsize=15, loc="upper left", borderpad=0.4, edgecolor="black")
-plt.title("CSE - Looking at the relationship between ASPI and EXPO", fontweight="bold")
+plt.title("CSE - Looking at the relationship between LOLC and EXPO", fontweight="bold")
 
 print(slope, intercept, r_value, p_value, std_err)
 print(r_squared)
