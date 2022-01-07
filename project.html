@@ -81,7 +81,7 @@ In the 2021 Formula 1 season, the winning constructor (team), Mercedes, scored 6
 </div>
 
 <p class="project-page-text">
-  The data used here was accessed from a variety of sources, a full source list can be found <a target="_blank" style="color: rgb(19, 143, 242);" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/data/rd_source_list.csv";>here</a> and mainly includes motorsports blogs. The data was manually entered into an excel file and imported into Python for analysis. Given the variety of sources used and inconsistency in site design across sources, a web scraper or API could not be used here. This posed the first challenge. The data used here are estimates as R&D data is not public. It is also not very replicable as new sites pop up every year with estimates for expenditure. However, given the frequency of data (1-year intervals) this is not a significant issue as rapid updates are not crucial.
+  The data used here was accessed from a variety of sources (<a target="_blank" style="color: rgb(19, 143, 242);" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/data/rd_source_list.csv";>source list</a>) and mainly includes motorsports blogs. The data was manually entered into an excel file. Given the variety of sources used and inconsistency in site design, a web scraper or API could not be used here. This posed the first challenge. The data used here are estimates as R&D data is not public. It is also not very replicable as new sites pop up every year with estimates for expenditure. However, given the frequency of data (1-year intervals) this is not a significant issue.
 </p>
 </container>
 <br>
@@ -102,7 +102,7 @@ In the 2021 Formula 1 season, the winning constructor (team), Mercedes, scored 6
     </script>
   </div>
   <p class="project-page-text">
-    This section presents the points scored by constructors between 2012 and 2021. The data was accessed from the Ergast F1 API through Python using <a target="_blank" style="color: rgb(19, 143, 242);" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/python/F1Project/chart-2-constructor-standings.ipynb">this</a> script. Given the complexity of the API and multiple levels of nesting, it could not be directly accessed in Vega and Python had to be used. A module called pyErgast was designed for this purpose and heavily inspired the code used to obtain the data for this graph. The data in this section is automated and easily replicable as the same Python script can be run once a year to update the data when a season ends.
+    The data used here was accessed from the Ergast F1 API through Python using <a target="_blank" style="color: rgb(19, 143, 242);" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/python/F1Project/chart-2-constructor-standings.ipynb">this</a> script. Given the complexity of the API and multiple levels of nesting, it could not be directly accessed in Vega and Python had to be used. A module called pyErgast was designed for this purpose and heavily inspired the code used to obtain the data for this graph. The data in this section is automated and easily replicable as the same Python script can be run once a year to update the data when a season ends.
   </p>
 </container>
 <br>
@@ -152,7 +152,7 @@ In the 2021 Formula 1 season, the winning constructor (team), Mercedes, scored 6
   </div>
 
   <p class="project-page-text">
-    This presents a proxy for R&D expenditure, stock prices. The data was obtained using the yfinance Python module which accesses the yahoo finance API using <a target="_blank" style="color: rgb(19, 143, 242)" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/python/F1Project/f1-stock-price.ipynb">this</a> script. Only Mercedes and Williams have clear public parent companies and data going back to 2012, so they were the only teams selected. This was used as a proxy as the stock price of a team can be indicative of the value of the company and therefore the amount of funds available for investment in R&D. This shows that there is a clear correlation between stock prices and race points for Mercedes, but not for Williams. 
+    This presents a proxy for R&D expenditure, stock prices. The data was obtained using the yfinance Python module which accesses the yahoo finance API using <a target="_blank" style="color: rgb(19, 143, 242)" href="https://github.com/tahaadamaly/tahaadamaly.github.io/blob/main/python/F1Project/f1-stock-price.ipynb">this</a> script. Only Mercedes and Williams have clear public parent companies and data going back to 2012, so they were the only teams selected. This was used as a proxy as the stock price of a team can be indicative of the value of the company and therefore the amount of funds available for investment in R&D. This shows that there is a clear correlation between average stock prices and race points for Mercedes in a year, but not for Williams. 
   </p>
 </container>
 <!-- /////////////////// END SECTION 4 //////////////////////////////////// -->
