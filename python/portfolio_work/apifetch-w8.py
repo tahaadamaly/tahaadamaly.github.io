@@ -6,7 +6,7 @@ apibase = "https://api.stlouisfed.org/fred/series/observations?series_id={}&api_
 serieslist = ['SWEPFCEQDSMEI', 'DNKPFCEQDSMEI']
 fileBase = "fred_consump_{}.json"
 
-# API Fetch for 4 different cryptocurrencies from the Nomics API
+# API Fetch for Sweden and Denmark consumption
 
 for i in serieslist:
     apiurl = apibase.format(i)

@@ -8,7 +8,7 @@
       "anchor": "start",
       "color": "black"
     },
-  "data": {"url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/python/F1Project/qualirace.csv"},
+  "data": {"url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/qualirace.csv"},
   "width": "container",
   "height": 310,
 
@@ -31,7 +31,12 @@
       "aggregate": "count",
       "type": "quantitative",
       "scale": {"scheme": "turbo"}
-    }
+    },
+           "tooltip": [
+            {"field": "qualipos", "type": "quantitative", "title": "Qualifying Position"},
+            {"field": "racepos", "type": "quantitative", "title": "Race Position"},
+            {"aggregate": "count", "type": "quantitative", "title": "Count"}
+        ]
   },
 
   "config": {
