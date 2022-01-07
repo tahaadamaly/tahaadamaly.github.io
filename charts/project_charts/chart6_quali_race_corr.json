@@ -3,8 +3,8 @@
   "title": {
       "text": "Formula 1 Qualifying Position vs Race Outcome",
       "subtitleFontStyle":"italic",
-      
-      "subtitleFontSize":10,
+      "fontSize": 20,
+      "subtitleFontSize":12,
       "anchor": "start",
       "color": "black"
     },
