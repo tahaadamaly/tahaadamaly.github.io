@@ -6,4 +6,11 @@ df = pd.read_excel('data/R&D_Data.xlsx')
 
 print(df)
 
+def categorise(row):
+    return df.loc[df['year']==row['year'], 'expenditure'].sum()
+df['totalexp'] = df.apply(lambda row: categorise(row), axis=1)
+df['proptotalexp'] = df['expenditure']/df['totalexp']
+
+
+
 df.to_csv('data/f1_rd_data.csv')

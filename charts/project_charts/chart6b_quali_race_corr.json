@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-      "text": "Formula 1 Qualifying Position vs Race Outcome",
+      "text": "Qualifying Position vs Race Outcome",
       "subtitleFontStyle":"italic",
       "fontSize": 20,
       "subtitleFontSize":12,

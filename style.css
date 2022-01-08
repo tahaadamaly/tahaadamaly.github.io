@@ -126,6 +126,7 @@ h3 {
   transition: border-radius 400ms, flex-grow 1000ms;
   width: 45%;
   min-width: 350px;
+  transition: transform 1000ms;
   
 }
 
@@ -150,10 +151,14 @@ h3 {
   min-width: 350px;
 }
 
-.chart:hover, #chart1:hover {
+.chart:hover {
   border-color: rgb(19, 117, 197);
-  border-radius: 5px;
-  flex-grow: 1;
+  transform: scale(1.05, 1.05);
+  transition: transform 1000ms;
+}
+#chart1:hover {
+  border-color: rgb(19, 117, 197);
+  transform: scale(1, 1);
 }
 
 .chart-hw-8{
@@ -167,12 +172,13 @@ h3 {
   transition: border-radius 400ms, flex-grow 1000ms;
   width: 45%;
   min-width: 350px;
+  transition: transform 1000ms;
 }
 
 .chart-hw-8:hover {
   border-color: rgb(19, 117, 197);
-  border-radius: 5px;
-  flex-grow: 0.1;
+  transform: scale(1.05, 1.05);
+  transition: transform 1000ms;
 }
 
 .text-hw-8 {
@@ -205,7 +211,6 @@ h3 {
 
 .image-wk9-container:hover {
   border-color: rgb(19, 117, 197);
-  border-radius: 5px;
   flex-grow: 0.1;
 }
 
@@ -220,12 +225,15 @@ h3 {
   transition: border-radius 400ms, flex-grow 1000ms;
   width: 45%;
   min-width: 350px;
+  transition: transform 1000ms;
 }
 
 .chart-interactive:hover {
   border-color: rgb(19, 117, 197);
-  border-radius: 5px;
+  transform: scale(1.05, 1.05);
+  transition: transform 1000ms;
 }
+
 /* --------------------------------------END CONTENT IN BODY--------------------------------------------*/
 
 
@@ -283,6 +291,7 @@ footer {
   transition: border-radius 400ms, flex-grow 1000ms;
   width: 75%;
   min-width: 350px;
+  
 }
 
 .chart-project-section4 {
@@ -296,6 +305,7 @@ footer {
   transition: border-radius 400ms, flex-grow 1000ms;
   width: 47%;
   min-width: 350px;
+  margin-left: 1.2%;
   
 }
 .chart-project-section1:hover, .chart-project-section4:hover {

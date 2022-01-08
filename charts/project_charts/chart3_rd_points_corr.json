@@ -1,27 +1,24 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Formula 1 R&D Expenditure and Constructor Standings",
+    "text": "R&D Expenditure and Constructor Standings",
     "subtitle": "2012-2020, Hover over points for detailed information",
-    "subtitleFontStyle":"italic",
+    "subtitleFontStyle": "italic",
     "fontSize": 20,
-    "subtitleFontSize":12,
+    "subtitleFontSize": 12,
     "anchor": "start",
     "color": "black"
   },
   "data": {
     "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/f1-rd-constructor-standings.csv",
-    "format":{"type": "csv"}
+    "format": {"type": "csv"}
   },
   "width": "container",
   "height": 310,
   "layer": [
     {
-      "mark": {
-        "type": "point",
-        "filled": false,
-        "size": 80
-      },
+      
+      "mark": {"type": "point", "filled": false, "size": 80},
       "encoding": {
         "x": {
           "field": "rd_exp",
@@ -34,49 +31,40 @@
           "type": "quantitative",
           "title": "Constructor Points (Proportion of total scored by all teams)"
         },
-          "color": {
-            "field": "constructorID",
-            "type": "nominal",
-            "legend": null,
-            "scale": {"scheme": "inferno"}
+        "color": {
+          "field": "constructorID",
+          "type": "nominal",
+          "legend": null,
+          "scale": {"domain": ["mercedes", "red_bull", "alfa", "alphatauri", "alpine", "aston_martin", "ferrari", "mclaren", "williams"],"range": ["#00D2BE", "#0600EF", "#900000", "#2B4562", "#0090FF", "#006F62", "#DC0000", "#FF8700", "#005AFF"]}
         },
-           "tooltip": [
-            {"field": "constructorID", "type": "nominal", "title": "Constructor"},
-            {"field": "year", "type": "quantitative", "title": "Year"},
-            {"field": "proptotalpoints", "type": "quantitative", "title": "Prop. of Points", "format": ".2f"},
-            {"field": "rd_exp", "type": "quantitative", "title": "R&D Expenditure"}
+        "tooltip": [
+          {"field": "constructorID", "type": "nominal", "title": "Constructor"},
+          {"field": "year", "type": "quantitative", "title": "Year"},
+          {
+            "field": "proptotalpoints",
+            "type": "quantitative",
+            "title": "Prop. of Points",
+            "format": ".2f"
+          },
+          {
+            "field": "rd_exp",
+            "type": "quantitative",
+            "title": "R&D Expenditure"
+          }
         ]
       }
     },
     {
-      "mark": {
-        "type": "line",
-        "color": "seagreen"
-      },
-      "transform": [
-        {
-          "regression": "proptotalpoints",
-          "on": "rd_exp"
-        }
-      ],
+      "mark": {"type": "line", "color": "seagreen"},
+      "transform": [{"regression": "proptotalpoints", "on": "rd_exp"}],
       "encoding": {
-        "x": {
-          "field": "rd_exp",
-          "type": "quantitative"
-        },
-        "y": {
-          "field": "proptotalpoints",
-          "type": "quantitative"
-        }
+        "x": {"field": "rd_exp", "type": "quantitative"},
+        "y": {"field": "proptotalpoints", "type": "quantitative"}
       }
     },
     {
       "transform": [
-        {
-          "regression": "proptotalpoints",
-          "on": "rd_exp",
-          "params": true
-        },
+        {"regression": "proptotalpoints", "on": "rd_exp", "params": true},
         {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
       ],
       "mark": {
@@ -87,9 +75,7 @@
         "align": "right",
         "y": -5
       },
-      "encoding": {
-        "text": {"type": "nominal", "field": "R2"}
-      }
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
     }
   ]
 }
