@@ -21,7 +21,7 @@
     
     "width": "container",
     
-    "mark": {"type": "bar", "size": 40},
+    "mark": {"type": "bar"},
       
     "selection": {
       "Team": {
@@ -67,7 +67,7 @@
       },
       "tooltip": [
         {"field": "team", "type": "nominal", "title": "Constructor"},
-        {"field": "expenditure", "type": "quantitative", "title": "Total Expenditure (US$, M)"}
+        {"field": "expenditure", "type": "quantitative", "title": "Total Expenditure (US$, M)", "format": "$.2f"}
       ]
     }
   }

@@ -11,7 +11,6 @@
   "data": {"url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/f1_qualiracecorr.csv"},
   "width": "container",
   "height": 310,
-
   "mark": "rect",
   "encoding": {
     "x": {

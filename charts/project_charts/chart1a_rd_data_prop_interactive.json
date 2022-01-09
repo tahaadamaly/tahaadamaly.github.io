@@ -1,0 +1,93 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": {
+    "text": "Constructor R&D Proportions",
+    "fontSize": 20,
+    "subtitle": "Proportion of total, Colors represent teams",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "color": "black"
+  },
+  "description": "F1 Data",
+  "data": {
+    "url": "https://raw.githubusercontent.com/tahaadamaly/tahaadamaly.github.io/main/data/f1_rd_data.csv",
+    "format": {"type": "csv"}
+  },
+  "height": 300,
+  "width": "container",
+  "mark": {"type": "bar"},
+  "selection": {
+    "Team": {
+      "type": "single",
+      "fields": ["team"],
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "mercedes",
+          "red_bull",
+          "ferrari",
+          "mclaren",
+          "alpine",
+          "alphatauri",
+          "aston_martin",
+          "williams",
+          "alfa"
+        ],
+        "name": "Select a Team: "
+      }
+    }
+  },
+  "transform": [{"filter": {"selection": "Team"}}],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "nominal",
+      "title": null,
+      "axis": {"labelAngle": 0}
+    },
+    "y": {
+      "field": "proptotalexp",
+      "type": "quantitative",
+      "title": "R&D Expenditure (Proportion of total)",
+      "axis": {"grid": false}
+    },
+    "color": {
+      "field": "team",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": [
+          "mercedes",
+          "red_bull",
+          "alfa",
+          "alphatauri",
+          "alpine",
+          "aston_martin",
+          "ferrari",
+          "mclaren",
+          "williams"
+        ],
+        "range": [
+          "#00D2BE",
+          "#0600EF",
+          "#900000",
+          "#2B4562",
+          "#0090FF",
+          "#006F62",
+          "#DC0000",
+          "#FF8700",
+          "#005AFF"
+        ]
+      }
+    },
+    "order": {"aggregate": "sum"},
+    "tooltip": [
+      {"field": "team", "type": "nominal", "title": "Constructor"},
+      {"field": "expenditure", "type": "quantitative", "title": "Total Expenditure (US$, M)", "format": "$.2f"},
+      {"field": "proptotalexp", "type": "quantitative", "title": "Proportion of Expenditure", "format": ".1%"}
+      
+    ]
+  }
+}

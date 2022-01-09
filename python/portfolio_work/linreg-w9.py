@@ -31,9 +31,9 @@ stock_data['lolc'] = lolc['price']
 x = stock_data['lolc']
 y = stock_data['expo']
 
-print(x)
+
 # Polynomial model with 3 features
-"""poly_model = make_pipeline(PolynomialFeatures(3), LinearRegression())
+poly_model = make_pipeline(PolynomialFeatures(3), LinearRegression())
 poly_model.fit(x[:, np.newaxis], y)
 xfit = np.linspace(min(x), max(x), 2)
 yfit = poly_model.predict(xfit[:, np.newaxis])
@@ -55,4 +55,4 @@ plt.title("CSE - Looking at the relationship between LOLC and EXPO", fontweight=
 print(slope, intercept, r_value, p_value, std_err)
 print(r_squared)
 
-plt.show()"""
+plt.show()

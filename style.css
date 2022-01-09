@@ -288,7 +288,7 @@ footer {
   border-radius: 25px;
   text-align: center;
   padding: 20px;
-  transition: border-radius 400ms, flex-grow 1000ms;
+  transition: border-radius 400ms, flex-grow 1000ms, box-shadow 1s;
   width: 75%;
   min-width: 350px;
   
@@ -302,14 +302,15 @@ footer {
   border-radius: 25px;
   text-align: center;
   padding: 20px;
-  transition: border-radius 400ms, flex-grow 1000ms;
+  transition: border-radius 400ms, flex-grow 1000ms, box-shadow 1s;
   width: 47%;
   min-width: 350px;
   margin-left: 1.2%;
   
 }
 .chart-project-section1:hover, .chart-project-section4:hover {
-  border-color: rgb(17, 143, 242);
+  box-shadow: 0 0 10px 2px rgb(115, 193, 253);
+  transition: box-shadow 1s;
 }
 
 
@@ -355,7 +356,7 @@ footer {
     text-transform: lowercase;
     transition: flex-grow var(--duration) var(--ease);
   }
-  /* CSS Stylesheet - TJA */
+
   .multi-button button + button {
     border-left: var(--border-size) solid var(--border-color);
     margin-left: calc(var(--border-size) * -1);
@@ -369,7 +370,7 @@ footer {
     text-shadow: none;
     background-color: var(--color-secondary);
   }
-  /* CSS Stylesheet - TJA */
+
   .multi-button button:focus {
     outline: var(--border-size) solid var(--color-primary);
     outline-offset: calc(var(--border-size) * -3);
@@ -433,6 +434,9 @@ footer {
   }
 }
 
+/* Mobile friendly version to allow for clear viewing on a smartphone screen
+This essentially removes the container borders which allows the page to be viewed clearly on a smartphone */
+
 @media only screen and (max-width: 450px) {
   body {
     max-width: 98%
@@ -457,7 +461,7 @@ footer {
     padding: 1px;
     gap: 10px 10px
   }
-  .bcontainer-project-section5 {
+  .bcontainer-project-section4 {
     border-style: none;
     padding: 1px;
     gap: 10px 10px
